@@ -1,0 +1,5 @@
+/home/parallels/Developement/PwTpsit/cmake-build-debug/CMakeFiles/PwTpsit.dir
+/home/parallels/Developement/PwTpsit/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/parallels/Developement/PwTpsit/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/parallels/Developement/PwTpsit/cmake-build-debug/CMakeFiles/PwTpsit_autogen_timestamp_deps.dir
+/home/parallels/Developement/PwTpsit/cmake-build-debug/CMakeFiles/PwTpsit_autogen.dir
