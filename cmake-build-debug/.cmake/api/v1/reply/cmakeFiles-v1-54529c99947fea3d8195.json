@@ -21,6 +21,11 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "/home/parallels/Downloads/CLion-2023.1.2-aarch64/clion-2023.1.2/bin/cmake/linux/aarch64/share/cmake-3.25/Modules/CMakeUnixFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "/home/parallels/Downloads/CLion-2023.1.2-aarch64/clion-2023.1.2/bin/cmake/linux/aarch64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
@@ -540,6 +545,21 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/home/parallels/Downloads/CLion-2023.1.2-aarch64/clion-2023.1.2/bin/cmake/linux/aarch64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/parallels/Downloads/CLion-2023.1.2-aarch64/clion-2023.1.2/bin/cmake/linux/aarch64/share/cmake-3.25/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/parallels/Downloads/CLion-2023.1.2-aarch64/clion-2023.1.2/bin/cmake/linux/aarch64/share/cmake-3.25/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/parallels/Downloads/CLion-2023.1.2-aarch64/clion-2023.1.2/bin/cmake/linux/aarch64/share/cmake-3.25/Modules/ProcessorCount.cmake"
 		},
 		{
 			"isCMake" : true,
