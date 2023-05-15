@@ -1,8 +1,0 @@
-# ninja log v5
-0	90	1683701901386982413	PwTpsit_autogen/timestamp	7839691c90c68c1e
-0	90	1683701901386982413	PwTpsit_autogen/mocs_compilation.cpp	7839691c90c68c1e
-0	90	1683701901386982413	/home/parallels/Developement/PwTpsit/cmake-build-debug/PwTpsit_autogen/mocs_compilation.cpp	7839691c90c68c1e
-0	90	1683701901386982413	/home/parallels/Developement/PwTpsit/cmake-build-debug/PwTpsit_autogen/timestamp	7839691c90c68c1e
-90	116	1683701901418982217	CMakeFiles/PwTpsit.dir/PwTpsit_autogen/mocs_compilation.cpp.o	678f0f30b87b4040
-1017	1271	1683701902570975187	PwTpsit	a9b5879d7e3c6baa
-116	1017	1683701902322976690	CMakeFiles/PwTpsit.dir/main.cpp.o	9ec6d6035d4a6afb
