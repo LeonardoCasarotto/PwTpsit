@@ -11,8 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
                                                     "/home",
                                                     QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
 
+    displayDirectory(dir);
 
-    ui->label->setText(dir);
 
 
 
@@ -25,18 +25,22 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::updateLabelText(const QString& newText)
-{
-    ui->label->setText(newText);
-}
+
 
 void MainWindow::displayDirectory(const QString& newText)
 {
     QDir dir(newText);
 
-    QStringList files = directory.entryList(QDir::Files);
-    qDebug() << "Files:";
-    for (const QString& file : files) {
-        qDebug() << file;
+    foreach (QFileInfo v, dir.entryInfoList()) {
+
+
+        QMimeDatabase mimeDatabase;
+        QMimeType mimeType = mimeDatabase.mimeTypeForFile(v.filePath());
+
+        if (v.fileName() != "." && v.fileName() != "..") {
+            ui->listWidget->addItem(v.fileName()+"\t"+"MIME type:"+mimeType.comment());
+        }
+    }
+
 }
 

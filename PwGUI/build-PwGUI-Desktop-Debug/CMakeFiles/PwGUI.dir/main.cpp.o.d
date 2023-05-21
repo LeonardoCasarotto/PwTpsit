@@ -352,6 +352,9 @@ CMakeFiles/PwGUI.dir/main.cpp.o: \
  /usr/include/qt6/QtWidgets/QLabel /usr/include/qt6/QtWidgets/qlabel.h \
  /usr/include/qt6/QtWidgets/qframe.h /usr/include/qt6/QtGui/qpicture.h \
  /usr/include/qt6/QtGui/qtextdocument.h \
+ /usr/include/qt6/QtCore/QMimeDatabase \
+ /usr/include/qt6/QtCore/qmimedatabase.h \
+ /usr/include/qt6/QtCore/qmimetype.h \
  /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtCore/qcoreapplication.h \

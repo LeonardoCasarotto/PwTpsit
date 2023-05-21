@@ -353,6 +353,9 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtWidgets/QLabel /usr/include/qt6/QtWidgets/qlabel.h \
  /usr/include/qt6/QtWidgets/qframe.h /usr/include/qt6/QtGui/qpicture.h \
  /usr/include/qt6/QtGui/qtextdocument.h \
+ /usr/include/qt6/QtCore/QMimeDatabase \
+ /usr/include/qt6/QtCore/qmimedatabase.h \
+ /usr/include/qt6/QtCore/qmimetype.h \
  /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/include/./ui_mainwindow.h \
  /usr/include/qt6/QtCore/QVariant /usr/include/qt6/QtCore/qvariant.h \
  /usr/include/qt6/QtWidgets/QApplication \
@@ -365,7 +368,23 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtGui/qguiapplication.h \
  /usr/include/qt6/QtGui/qinputmethod.h \
  /usr/include/qt6/QtGui/qguiapplication_platform.h \
- /usr/include/qt6/QtWidgets/QLabel /usr/include/qt6/QtWidgets/QMainWindow \
+ /usr/include/qt6/QtWidgets/QListWidget \
+ /usr/include/qt6/QtWidgets/qlistwidget.h \
+ /usr/include/qt6/QtWidgets/qlistview.h \
+ /usr/include/qt6/QtWidgets/qabstractitemview.h \
+ /usr/include/qt6/QtWidgets/qabstractscrollarea.h \
+ /usr/include/qt6/QtCore/qabstractitemmodel.h \
+ /usr/include/qt6/QtCore/qitemselectionmodel.h \
+ /usr/include/qt6/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/qt6/QtWidgets/qstyleoption.h \
+ /usr/include/qt6/QtWidgets/qabstractspinbox.h \
+ /usr/include/qt6/QtGui/qvalidator.h \
+ /usr/include/qt6/QtCore/qregularexpression.h \
+ /usr/include/qt6/QtWidgets/qslider.h \
+ /usr/include/qt6/QtWidgets/qabstractslider.h \
+ /usr/include/qt6/QtWidgets/qstyle.h /usr/include/qt6/QtWidgets/qtabbar.h \
+ /usr/include/qt6/QtWidgets/qrubberband.h \
+ /usr/include/qt6/QtWidgets/QMainWindow \
  /usr/include/qt6/QtWidgets/QMenuBar \
  /usr/include/qt6/QtWidgets/qmenubar.h /usr/include/qt6/QtWidgets/qmenu.h \
  /usr/include/qt6/QtWidgets/QStatusBar \

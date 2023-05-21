@@ -469,6 +469,9 @@ CMakeFiles/PwGUI.dir/PwGUI_autogen/mocs_compilation.cpp.o: PwGUI_autogen/mocs_co
   /usr/include/qt6/QtWidgets/qframe.h \
   /usr/include/qt6/QtGui/qpicture.h \
   /usr/include/qt6/QtGui/qtextdocument.h \
+  /usr/include/qt6/QtCore/QMimeDatabase \
+  /usr/include/qt6/QtCore/qmimedatabase.h \
+  /usr/include/qt6/QtCore/qmimetype.h \
   /usr/include/qt6/QtGui/qtextcursor.h \
   /usr/include/qt6/QtGui/qtextformat.h \
   /usr/include/qt6/QtGui/qpen.h \
@@ -942,6 +945,9 @@ CMakeFiles/PwGUI.dir/main.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/main.cpp \
   /usr/include/qt6/QtWidgets/qframe.h \
   /usr/include/qt6/QtGui/qpicture.h \
   /usr/include/qt6/QtGui/qtextdocument.h \
+  /usr/include/qt6/QtCore/QMimeDatabase \
+  /usr/include/qt6/QtCore/qmimedatabase.h \
+  /usr/include/qt6/QtCore/qmimetype.h \
   /usr/include/qt6/QtWidgets/QApplication \
   /usr/include/qt6/QtWidgets/qapplication.h \
   /usr/include/qt6/QtCore/qcoreapplication.h \
@@ -1420,6 +1426,9 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/qt6/QtWidgets/qframe.h \
   /usr/include/qt6/QtGui/qpicture.h \
   /usr/include/qt6/QtGui/qtextdocument.h \
+  /usr/include/qt6/QtCore/QMimeDatabase \
+  /usr/include/qt6/QtCore/qmimedatabase.h \
+  /usr/include/qt6/QtCore/qmimetype.h \
   PwGUI_autogen/include/ui_mainwindow.h \
   /usr/include/qt6/QtCore/QVariant \
   /usr/include/qt6/QtCore/qvariant.h \
@@ -1433,7 +1442,23 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/qt6/QtGui/qguiapplication.h \
   /usr/include/qt6/QtGui/qinputmethod.h \
   /usr/include/qt6/QtGui/qguiapplication_platform.h \
-  /usr/include/qt6/QtWidgets/QLabel \
+  /usr/include/qt6/QtWidgets/QListWidget \
+  /usr/include/qt6/QtWidgets/qlistwidget.h \
+  /usr/include/qt6/QtWidgets/qlistview.h \
+  /usr/include/qt6/QtWidgets/qabstractitemview.h \
+  /usr/include/qt6/QtWidgets/qabstractscrollarea.h \
+  /usr/include/qt6/QtCore/qabstractitemmodel.h \
+  /usr/include/qt6/QtCore/qitemselectionmodel.h \
+  /usr/include/qt6/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/qt6/QtWidgets/qstyleoption.h \
+  /usr/include/qt6/QtWidgets/qabstractspinbox.h \
+  /usr/include/qt6/QtGui/qvalidator.h \
+  /usr/include/qt6/QtCore/qregularexpression.h \
+  /usr/include/qt6/QtWidgets/qslider.h \
+  /usr/include/qt6/QtWidgets/qabstractslider.h \
+  /usr/include/qt6/QtWidgets/qstyle.h \
+  /usr/include/qt6/QtWidgets/qtabbar.h \
+  /usr/include/qt6/QtWidgets/qrubberband.h \
   /usr/include/qt6/QtWidgets/QMainWindow \
   /usr/include/qt6/QtWidgets/QMenuBar \
   /usr/include/qt6/QtWidgets/qmenubar.h \
@@ -1449,6 +1474,24 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 /usr/include/qt6/QtWidgets/qmenu.h:
 
 /usr/include/qt6/QtWidgets/qmenubar.h:
+
+/usr/include/qt6/QtWidgets/qtabbar.h:
+
+/usr/include/qt6/QtWidgets/qstyle.h:
+
+/usr/include/qt6/QtWidgets/qabstractslider.h:
+
+/usr/include/qt6/QtWidgets/qslider.h:
+
+/usr/include/qt6/QtGui/qvalidator.h:
+
+/usr/include/qt6/QtWidgets/qstyleoption.h:
+
+/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:
+
+/usr/include/qt6/QtWidgets/qabstractscrollarea.h:
+
+/usr/include/qt6/QtWidgets/qlistview.h:
 
 /usr/include/qt6/QtCore/QVariant:
 
@@ -1570,6 +1613,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 
 /usr/include/qt6/QtCore/qbindingstorage.h:
 
+/usr/include/qt6/QtCore/qregularexpression.h:
+
 /usr/include/qt6/QtCore/qobject_impl.h:
 
 /usr/include/c++/13.1.1/bits/stl_multimap.h:
@@ -1590,6 +1635,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 
 /usr/include/qt6/QtCore/qalgorithms.h:
 
+/usr/include/qt6/QtCore/qmimedatabase.h:
+
 /usr/include/qt6/QtCore/qbytearraylist.h:
 
 /usr/include/qt6/QtGui/qtextcursor.h:
@@ -1601,6 +1648,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 /usr/include/c++/13.1.1/bits/stl_numeric.h:
 
 /usr/include/c++/13.1.1/numeric:
+
+/usr/include/qt6/QtWidgets/qabstractspinbox.h:
 
 /usr/include/qt6/QtCore/qhashfunctions.h:
 
@@ -1794,6 +1843,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 
 /usr/include/bits/typesizes.h:
 
+/usr/include/qt6/QtCore/QMimeDatabase:
+
 /usr/include/c++/13.1.1/optional:
 
 /usr/include/bits/types/__fpos64_t.h:
@@ -1923,6 +1974,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 /usr/include/c++/13.1.1/bits/ios_base.h:
 
 /usr/include/bits/math-vector.h:
+
+/usr/include/qt6/QtCore/qmimetype.h:
 
 /usr/include/c++/13.1.1/string:
 
@@ -2078,6 +2131,8 @@ PwGUI_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13.1.1/initializer_list:
 
+/usr/include/qt6/QtWidgets/qrubberband.h:
+
 /usr/include/bits/local_lim.h:
 
 /usr/include/qt6/QtCore/qtcoreexports.h:
@@ -2087,6 +2142,8 @@ PwGUI_autogen/mocs_compilation.cpp:
 /usr/include/c++/13.1.1/cctype:
 
 /usr/include/qt6/QtGui/qtguiglobal.h:
+
+/usr/include/qt6/QtCore/qitemselectionmodel.h:
 
 /usr/include/qt6/QtGui/qregion.h:
 
@@ -2107,6 +2164,8 @@ PwGUI_autogen/mocs_compilation.cpp:
 /usr/include/qt6/QtCore/qglobal.h:
 
 /usr/include/qt6/QtWidgets/QMenuBar:
+
+/usr/include/qt6/QtWidgets/QListWidget:
 
 /usr/include/libintl.h:
 
@@ -2204,6 +2263,8 @@ PwGUI_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13.1.1/bits/stl_bvector.h:
 
+/usr/include/qt6/QtWidgets/qabstractitemview.h:
+
 /usr/include/bits/types/struct_timeval.h:
 
 /usr/include/c++/13.1.1/limits:
@@ -2297,6 +2358,8 @@ PwGUI_autogen/include/ui_mainwindow.h:
 /usr/include/features.h:
 
 /usr/include/bits/types/__FILE.h:
+
+/usr/include/qt6/QtCore/qabstractitemmodel.h:
 
 /usr/include/c++/13.1.1/bits/stl_tree.h:
 
@@ -2411,6 +2474,8 @@ PwGUI_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /usr/include/qt6/QtCore/qconstructormacros.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.1.1/include/stdarg.h:
+
+/usr/include/qt6/QtWidgets/qlistwidget.h:
 
 /usr/include/c++/13.1.1/bits/stringfwd.h:
 

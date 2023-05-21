@@ -291,6 +291,7 @@
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/qt6/QtCore/QDebug \
+  /usr/include/qt6/QtCore/QMimeDatabase \
   /usr/include/qt6/QtCore/q20memory.h \
   /usr/include/qt6/QtCore/q20type_traits.h \
   /usr/include/qt6/QtCore/qalgorithms.h \
@@ -350,6 +351,8 @@
   /usr/include/qt6/QtCore/qmath.h \
   /usr/include/qt6/QtCore/qmetacontainer.h \
   /usr/include/qt6/QtCore/qmetatype.h \
+  /usr/include/qt6/QtCore/qmimedatabase.h \
+  /usr/include/qt6/QtCore/qmimetype.h \
   /usr/include/qt6/QtCore/qminmax.h \
   /usr/include/qt6/QtCore/qnamespace.h \
   /usr/include/qt6/QtCore/qnumeric.h \
