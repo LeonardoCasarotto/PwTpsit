@@ -1,0 +1,1 @@
+/usr/bin/g++ -DQT_QML_DEBUG -g CMakeFiles/PwGUI.dir/PwGUI_autogen/mocs_compilation.cpp.o CMakeFiles/PwGUI.dir/main.cpp.o CMakeFiles/PwGUI.dir/mainwindow.cpp.o -o PwGUI  /usr/lib/libQt6Widgets.so.6.5.0 /usr/lib/libQt6Gui.so.6.5.0 /usr/lib/libQt6Core.so.6.5.0 /usr/lib/libGLX.so /usr/lib/libOpenGL.so 
