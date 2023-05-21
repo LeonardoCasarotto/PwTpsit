@@ -5,7 +5,8 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QLabel>
-#include <QMimeDatabase>
+#include <QPixmap>
+#include <QListWidgetItem>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
