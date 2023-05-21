@@ -7,6 +7,7 @@
 #include <QLabel>
 #include <QPixmap>
 #include <QListWidgetItem>
+#include <QDesktopServices>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -20,6 +21,9 @@ public:
     ~MainWindow();
     void displayDirectory(const QString& newText);
 
+
+private slots:
+    void on_actionWiki_triggered();
 
 private:
     Ui::MainWindow *ui;

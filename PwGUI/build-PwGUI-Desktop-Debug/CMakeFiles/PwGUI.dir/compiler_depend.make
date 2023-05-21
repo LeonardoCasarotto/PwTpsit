@@ -488,6 +488,8 @@ CMakeFiles/PwGUI.dir/PwGUI_autogen/mocs_compilation.cpp.o: PwGUI_autogen/mocs_co
   /usr/include/qt6/QtWidgets/qstyle.h \
   /usr/include/qt6/QtWidgets/qtabbar.h \
   /usr/include/qt6/QtWidgets/qrubberband.h \
+  /usr/include/qt6/QtGui/QDesktopServices \
+  /usr/include/qt6/QtGui/qdesktopservices.h \
   /usr/include/qt6/QtGui/qtextcursor.h \
   /usr/include/qt6/QtGui/qtextformat.h \
   /usr/include/qt6/QtGui/qpen.h \
@@ -980,6 +982,8 @@ CMakeFiles/PwGUI.dir/main.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/main.cpp \
   /usr/include/qt6/QtWidgets/qstyle.h \
   /usr/include/qt6/QtWidgets/qtabbar.h \
   /usr/include/qt6/QtWidgets/qrubberband.h \
+  /usr/include/qt6/QtGui/QDesktopServices \
+  /usr/include/qt6/QtGui/qdesktopservices.h \
   /usr/include/qt6/QtWidgets/QApplication \
   /usr/include/qt6/QtWidgets/qapplication.h \
   /usr/include/qt6/QtCore/qcoreapplication.h \
@@ -1477,9 +1481,13 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/qt6/QtWidgets/qstyle.h \
   /usr/include/qt6/QtWidgets/qtabbar.h \
   /usr/include/qt6/QtWidgets/qrubberband.h \
+  /usr/include/qt6/QtGui/QDesktopServices \
+  /usr/include/qt6/QtGui/qdesktopservices.h \
   PwGUI_autogen/include/ui_mainwindow.h \
   /usr/include/qt6/QtCore/QVariant \
   /usr/include/qt6/QtCore/qvariant.h \
+  /usr/include/qt6/QtGui/QAction \
+  /usr/include/qt6/QtGui/qaction.h \
   /usr/include/qt6/QtWidgets/QApplication \
   /usr/include/qt6/QtWidgets/qapplication.h \
   /usr/include/qt6/QtCore/qcoreapplication.h \
@@ -1492,6 +1500,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/qt6/QtGui/qguiapplication_platform.h \
   /usr/include/qt6/QtWidgets/QListWidget \
   /usr/include/qt6/QtWidgets/QMainWindow \
+  /usr/include/qt6/QtWidgets/QMenu \
+  /usr/include/qt6/QtWidgets/qmenu.h \
   /usr/include/qt6/QtWidgets/QMenuBar \
   /usr/include/qt6/QtWidgets/qmenubar.h \
   /usr/include/qt6/QtWidgets/qmenu.h \
@@ -1503,9 +1513,11 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 
 /usr/include/qt6/QtWidgets/qstatusbar.h:
 
+/usr/include/qt6/QtWidgets/qmenubar.h:
+
 /usr/include/qt6/QtWidgets/qmenu.h:
 
-/usr/include/qt6/QtWidgets/qmenubar.h:
+/usr/include/qt6/QtGui/QAction:
 
 /usr/include/qt6/QtCore/QVariant:
 
@@ -1564,6 +1576,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 /usr/include/c++/13.1.1/bits/quoted_string.h:
 
 /usr/include/c++/13.1.1/x86_64-pc-linux-gnu/bits/time_members.h:
+
+/usr/include/qt6/QtGui/QDesktopServices:
 
 /usr/include/c++/13.1.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
@@ -1662,6 +1676,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 /usr/include/qt6/QtWidgets/qsizepolicy.h:
 
 /usr/include/qt6/QtCore/qmath.h:
+
+/usr/include/qt6/QtWidgets/QMenu:
 
 /usr/include/qt6/QtCore/qiodevicebase.h:
 
@@ -2152,6 +2168,8 @@ PwGUI_autogen/mocs_compilation.cpp:
 /usr/include/c++/13.1.1/type_traits:
 
 /usr/include/qt6/QtCore/qgenericatomic.h:
+
+/usr/include/qt6/QtGui/qdesktopservices.h:
 
 /usr/include/c++/13.1.1/locale:
 

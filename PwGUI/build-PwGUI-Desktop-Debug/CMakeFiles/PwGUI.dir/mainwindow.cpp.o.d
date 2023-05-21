@@ -370,8 +370,11 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtWidgets/qabstractslider.h \
  /usr/include/qt6/QtWidgets/qstyle.h /usr/include/qt6/QtWidgets/qtabbar.h \
  /usr/include/qt6/QtWidgets/qrubberband.h \
+ /usr/include/qt6/QtGui/QDesktopServices \
+ /usr/include/qt6/QtGui/qdesktopservices.h \
  /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/include/./ui_mainwindow.h \
  /usr/include/qt6/QtCore/QVariant /usr/include/qt6/QtCore/qvariant.h \
+ /usr/include/qt6/QtGui/QAction /usr/include/qt6/QtGui/qaction.h \
  /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtCore/qcoreapplication.h \
@@ -383,8 +386,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtGui/qinputmethod.h \
  /usr/include/qt6/QtGui/qguiapplication_platform.h \
  /usr/include/qt6/QtWidgets/QListWidget \
- /usr/include/qt6/QtWidgets/QMainWindow \
- /usr/include/qt6/QtWidgets/QMenuBar \
+ /usr/include/qt6/QtWidgets/QMainWindow /usr/include/qt6/QtWidgets/QMenu \
+ /usr/include/qt6/QtWidgets/qmenu.h /usr/include/qt6/QtWidgets/QMenuBar \
  /usr/include/qt6/QtWidgets/qmenubar.h /usr/include/qt6/QtWidgets/qmenu.h \
  /usr/include/qt6/QtWidgets/QStatusBar \
  /usr/include/qt6/QtWidgets/qstatusbar.h \

@@ -82,3 +82,9 @@ void MainWindow::displayDirectory(const QString& newText)
 
 
 
+
+void MainWindow::on_actionWiki_triggered()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/LeonardoCasarotto/PwTpsit/wiki"));
+}
+

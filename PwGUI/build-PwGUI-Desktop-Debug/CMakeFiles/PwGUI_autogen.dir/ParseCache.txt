@@ -416,12 +416,14 @@
  mdp:/usr/include/qt6/QtCore/qvarlengtharray.h
  mdp:/usr/include/qt6/QtCore/qversiontagging.h
  mdp:/usr/include/qt6/QtCore/qxptype_traits.h
+ mdp:/usr/include/qt6/QtGui/QDesktopServices
  mdp:/usr/include/qt6/QtGui/QPixmap
  mdp:/usr/include/qt6/QtGui/qaction.h
  mdp:/usr/include/qt6/QtGui/qbitmap.h
  mdp:/usr/include/qt6/QtGui/qbrush.h
  mdp:/usr/include/qt6/QtGui/qcolor.h
  mdp:/usr/include/qt6/QtGui/qcursor.h
+ mdp:/usr/include/qt6/QtGui/qdesktopservices.h
  mdp:/usr/include/qt6/QtGui/qfont.h
  mdp:/usr/include/qt6/QtGui/qfontinfo.h
  mdp:/usr/include/qt6/QtGui/qfontmetrics.h
