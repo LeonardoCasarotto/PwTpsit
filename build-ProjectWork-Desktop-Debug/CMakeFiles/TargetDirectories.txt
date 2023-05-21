@@ -1,8 +1,0 @@
-/home/leonardo/Desktop/PwTpsit/build-ProjectWork-Desktop-Debug/CMakeFiles/ProjectWork.dir
-/home/leonardo/Desktop/PwTpsit/build-ProjectWork-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/leonardo/Desktop/PwTpsit/build-ProjectWork-Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/leonardo/Desktop/PwTpsit/build-ProjectWork-Desktop-Debug/CMakeFiles/list_install_components.dir
-/home/leonardo/Desktop/PwTpsit/build-ProjectWork-Desktop-Debug/CMakeFiles/install.dir
-/home/leonardo/Desktop/PwTpsit/build-ProjectWork-Desktop-Debug/CMakeFiles/install/local.dir
-/home/leonardo/Desktop/PwTpsit/build-ProjectWork-Desktop-Debug/CMakeFiles/install/strip.dir
-/home/leonardo/Desktop/PwTpsit/build-ProjectWork-Desktop-Debug/CMakeFiles/ProjectWork_autogen.dir
