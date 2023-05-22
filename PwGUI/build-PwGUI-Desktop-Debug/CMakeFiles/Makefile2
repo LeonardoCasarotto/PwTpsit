@@ -82,12 +82,12 @@ clean: CMakeFiles/PwGUI_autogen.dir/clean
 CMakeFiles/PwGUI.dir/all: CMakeFiles/PwGUI_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles --progress-num=1,2,3,4 "Built target PwGUI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target PwGUI"
 .PHONY : CMakeFiles/PwGUI.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PwGUI.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PwGUI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/PwGUI.dir/rule
@@ -108,7 +108,7 @@ CMakeFiles/PwGUI.dir/clean:
 CMakeFiles/PwGUI_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI_autogen.dir/build.make CMakeFiles/PwGUI_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI_autogen.dir/build.make CMakeFiles/PwGUI_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles --progress-num=5 "Built target PwGUI_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles --progress-num=6 "Built target PwGUI_autogen"
 .PHONY : CMakeFiles/PwGUI_autogen.dir/all
 
 # Build rule for subdir invocation for target.

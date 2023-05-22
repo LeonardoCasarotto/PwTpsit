@@ -20,12 +20,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/3.26.3/CMakeSystem.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/share/cmake/Modules/CMakeUnixFindMake.cmake"
+			"path" : "/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/3.26.4/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -274,7 +269,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/3.26.3/CMakeCXXCompiler.cmake"
+			"path" : "/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -398,7 +393,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/3.26.3/CMakeCXXCompiler.cmake"
+			"path" : "/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isExternal" : true,

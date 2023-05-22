@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PwGUI.dir/main.cpp.o.d"
   "CMakeFiles/PwGUI.dir/mainwindow.cpp.o"
   "CMakeFiles/PwGUI.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o"
+  "CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o.d"
   "PwGUI"
   "PwGUI.pdb"
 )

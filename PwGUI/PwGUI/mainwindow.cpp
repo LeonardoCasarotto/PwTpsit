@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "searchinputdialog.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -45,7 +47,7 @@ void MainWindow::displayDirectory(const QString& newText)
         else if(v.suffix()=="png"||v.suffix()=="ico"||v.suffix()=="svg"||v.suffix()=="raw"||v.suffix()=="gif"||v.suffix()=="jpg"||v.suffix()=="jpeg"||v.suffix()=="heic"||v.suffix()=="heif"||v.suffix()=="webp"){
            img.load("../dependencies/icons/image.png");
         }
-        else if(v.suffix()=="cpp"||v.suffix()=="h"||v.suffix()=="hpp"||v.suffix()=="c"||v.suffix()==".js"||v.suffix()=="html"||v.suffix()=="rb"||v.suffix()=="css"||v.suffix()=="cs"||v.suffix()=="php"||v.suffix()=="java"||v.suffix()=="asm"||v.suffix()=="sh"||v.suffix()=="bat"){
+        else if(v.suffix()=="cpp"||v.suffix()=="h"||v.suffix()=="hpp"||v.suffix()=="c"||v.suffix()=="js"||v.suffix()=="html"||v.suffix()=="rb"||v.suffix()=="css"||v.suffix()=="cs"||v.suffix()=="php"||v.suffix()=="java"||v.suffix()=="asm"||v.suffix()=="sh"||v.suffix()=="bat"){
            img.load("../dependencies/icons/codeFile.png");
         }
         else if(v.suffix()=="zip"||v.suffix()=="tar"||v.suffix()=="gz"||v.suffix()=="7z"){
@@ -86,5 +88,19 @@ void MainWindow::displayDirectory(const QString& newText)
 void MainWindow::on_actionWiki_triggered()
 {
     QDesktopServices::openUrl(QUrl("https://github.com/LeonardoCasarotto/PwTpsit/wiki"));
+}
+
+
+void MainWindow::on_actionper_nome_triggered()
+{
+    QString textValue;
+    bool checkboxValue;
+
+    bool ok = SearchInputDialog::getCheckboxValue(nullptr, textValue, checkboxValue);
+    QMessageBox b;
+
+    b.setText(textValue+"    "+QString::number(checkboxValue));
+    b.exec();
+
 }
 

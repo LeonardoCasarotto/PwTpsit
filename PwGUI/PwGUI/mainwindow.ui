@@ -43,6 +43,17 @@
     <property name="title">
      <string>Edit</string>
     </property>
+    <widget class="QMenu" name="menuCerca">
+     <property name="title">
+      <string>Cerca</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="separator"/>
+     <addaction name="actionper_nome"/>
+     <addaction name="actionPer_Estensione"/>
+     <addaction name="actionPer_contenuto"/>
+    </widget>
+    <addaction name="menuCerca"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -58,6 +69,21 @@
   <action name="actionWiki">
    <property name="text">
     <string>Wiki</string>
+   </property>
+  </action>
+  <action name="actionper_nome">
+   <property name="text">
+    <string>Per nome</string>
+   </property>
+  </action>
+  <action name="actionPer_Estensione">
+   <property name="text">
+    <string>Per Estensione</string>
+   </property>
+  </action>
+  <action name="actionPer_contenuto">
+   <property name="text">
+    <string>Per contenuto</string>
    </property>
   </action>
  </widget>

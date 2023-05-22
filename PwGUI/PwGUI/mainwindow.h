@@ -8,6 +8,8 @@
 #include <QPixmap>
 #include <QListWidgetItem>
 #include <QDesktopServices>
+#include "searchinputdialog.h"
+#include <QMessageBox>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -24,6 +26,8 @@ public:
 
 private slots:
     void on_actionWiki_triggered();
+
+    void on_actionper_nome_triggered();
 
 private:
     Ui::MainWindow *ui;

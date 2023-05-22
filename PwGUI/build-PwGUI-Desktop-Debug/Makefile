@@ -259,6 +259,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+searchinputdialog.o: searchinputdialog.cpp.o
+.PHONY : searchinputdialog.o
+
+# target to build an object file
+searchinputdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o
+.PHONY : searchinputdialog.cpp.o
+
+searchinputdialog.i: searchinputdialog.cpp.i
+.PHONY : searchinputdialog.i
+
+# target to preprocess a source file
+searchinputdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/searchinputdialog.cpp.i
+.PHONY : searchinputdialog.cpp.i
+
+searchinputdialog.s: searchinputdialog.cpp.s
+.PHONY : searchinputdialog.s
+
+# target to generate assembly for a file
+searchinputdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/searchinputdialog.cpp.s
+.PHONY : searchinputdialog.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +306,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... searchinputdialog.o"
+	@echo "... searchinputdialog.i"
+	@echo "... searchinputdialog.s"
 .PHONY : help
 
 
