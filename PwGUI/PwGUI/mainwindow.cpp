@@ -3,6 +3,7 @@
 #include "searchinputdialog.h"
 
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -93,14 +94,13 @@ void MainWindow::on_actionWiki_triggered()
 
 void MainWindow::on_actionper_nome_triggered()
 {
-    QString textValue;
-    bool checkboxValue;
+    QString fileName;
+    bool includeSubfolders;
 
-    bool ok = SearchInputDialog::getCheckboxValue(nullptr, textValue, checkboxValue);
-    QMessageBox b;
+    bool ok = SearchInputDialog::getCheckboxValue(nullptr, 0, fileName, includeSubfolders);
 
-    b.setText(textValue+"    "+QString::number(checkboxValue));
-    b.exec();
+
+
 
 }
 

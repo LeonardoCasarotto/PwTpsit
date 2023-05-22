@@ -5,12 +5,13 @@
 #include <QCheckBox>
 #include <QLabel>
 
+
 class SearchInputDialog : public QInputDialog
 {
 public:
     SearchInputDialog(QWidget* parent = nullptr);
 
-    static bool getCheckboxValue(QWidget* parent, QString& textValue, bool& checkboxValue);
+    static bool getCheckboxValue(QWidget* parent, int searchBy, QString& textValue, bool& checkboxValue);
 
 private:
     QCheckBox* m_checkbox;

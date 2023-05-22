@@ -1975,18 +1975,8 @@ CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI
   /usr/include/qt6/QtWidgets/QLabel \
   /usr/include/qt6/QtWidgets/qlabel.h \
   /usr/include/qt6/QtGui/qpicture.h \
-  /usr/include/qt6/QtCore/qiodevice.h \
-  /usr/include/qt6/QtWidgets/QVBoxLayout \
-  /usr/include/qt6/QtWidgets/qboxlayout.h \
-  /usr/include/qt6/QtWidgets/qlayout.h \
-  /usr/include/qt6/QtWidgets/qlayoutitem.h \
-  /usr/include/qt6/QtWidgets/qboxlayout.h \
-  /usr/include/qt6/QtWidgets/qgridlayout.h
+  /usr/include/qt6/QtCore/qiodevice.h
 
-
-/usr/include/qt6/QtWidgets/qlayout.h:
-
-/usr/include/qt6/QtWidgets/qboxlayout.h:
 
 /usr/include/qt6/QtWidgets/qstatusbar.h:
 
@@ -2554,8 +2544,6 @@ CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI
 
 PwGUI_autogen/mocs_compilation.cpp:
 
-/usr/include/qt6/QtWidgets/qlayoutitem.h:
-
 /usr/include/bits/types/__locale_t.h:
 
 /usr/include/c++/13.1.1/bits/locale_conv.h:
@@ -2659,8 +2647,6 @@ PwGUI_autogen/mocs_compilation.cpp:
 /usr/include/qt6/QtCore/qsize.h:
 
 /usr/include/qt6/QtCore/qtnoop.h:
-
-/usr/include/qt6/QtWidgets/QVBoxLayout:
 
 /usr/include/c++/13.1.1/type_traits:
 
@@ -2799,8 +2785,6 @@ PwGUI_autogen/mocs_compilation.cpp:
 /usr/include/bits/wordsize.h:
 
 /usr/include/c++/13.1.1/bits/alloc_traits.h:
-
-/usr/include/qt6/QtWidgets/qgridlayout.h:
 
 /usr/include/bits/types/sigset_t.h:
 
