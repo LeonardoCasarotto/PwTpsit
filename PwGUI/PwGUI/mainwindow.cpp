@@ -2,7 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "searchinputdialog.h"
 
-
+QDir current;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
                                                     "/home",
                                                     QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
 
+    current = dir;
     displayDirectory(dir);
 
 
@@ -99,5 +100,59 @@ void MainWindow::on_actionper_nome_triggered()
 
     bool ok = SearchInputDialog::getCheckboxValue(nullptr, 0, fileName, includeSubfolders);
 
+    if(fileName==""||fileName==" ")
+    {
+        return;
+    }
+    else if(!includeSubfolders)
+    {
+        simpleSearchByName(current,fileName)
+    }
+
+
 }
 
+//search methods
+
+//search by name
+
+QString dfsFileSearchByName(const QDir& dir, const QString& filename)
+{
+
+
+    // Controlla se il nome del file corrente corrisponde al nome cercato
+    QStringList files = dir.entryList(QStringList() << "*", QDir::Files);
+    foreach (const QString& file, files) {
+        if (file == filename) {
+            return dir.absoluteFilePath(file);
+        }
+    }
+
+    // Esegui la ricerca DFS nelle sottodirectory
+    QStringList subdirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    foreach (const QString& subdirectory, subdirectories) {
+        QString newPath = dir.absoluteFilePath(subdirectory);
+        QString filePath = dfsFileSearchByName(newPath, filename);
+        if (!filePath.isEmpty()) {
+            return filePath;
+        }
+    }
+
+    // Il file non è stato trovato
+    return QString();
+}
+
+QString simpleSearchByName(const QDir& dir, const QString& filename)
+{
+
+    foreach (QFileInfo v, dir.entryInfoList())
+    {
+        if(v.fileName() == filename)
+        {
+            return v.absoluteFilePath();
+        }
+
+    }
+    return nullptr;
+
+}
