@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>868</width>
+    <height>639</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>861</width>
+      <height>571</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>861</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>868</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Strumenti</string>
+    </property>
+    <widget class="QMenu" name="menuCerca">
+     <property name="title">
+      <string>Cerca</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="separator"/>
+     <addaction name="actionper_nome"/>
+     <addaction name="actionPer_Estensione"/>
+     <addaction name="actionPer_contenuto"/>
+    </widget>
+    <widget class="QMenu" name="menuOrganizza">
+     <property name="title">
+      <string>Organizza</string>
+     </property>
+     <addaction name="actionOrdine_Alfabetico"/>
+     <addaction name="actionEstensione"/>
+     <addaction name="actionProprietario"/>
+     <addaction name="actionDimensione"/>
+    </widget>
+    <addaction name="menuCerca"/>
+    <addaction name="menuOrganizza"/>
+    <addaction name="actionScegli_nuova_directory"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionWiki"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionWiki">
+   <property name="text">
+    <string>Wiki</string>
+   </property>
+  </action>
+  <action name="actionper_nome">
+   <property name="text">
+    <string>Per Nome</string>
+   </property>
+  </action>
+  <action name="actionPer_Estensione">
+   <property name="text">
+    <string>Per Estensione</string>
+   </property>
+  </action>
+  <action name="actionPer_contenuto">
+   <property name="text">
+    <string>Per Contenuto</string>
+   </property>
+  </action>
+  <action name="actionScegli_nuova_directory">
+   <property name="text">
+    <string>Scegli nuova directory</string>
+   </property>
+  </action>
+  <action name="actionOrdine_Alfabetico">
+   <property name="text">
+    <string>Ordine Alfabetico</string>
+   </property>
+  </action>
+  <action name="actionEstensione">
+   <property name="text">
+    <string>Estensione</string>
+   </property>
+  </action>
+  <action name="actionProprietario">
+   <property name="text">
+    <string>Proprietario</string>
+   </property>
+  </action>
+  <action name="actionDimensione">
+   <property name="text">
+    <string>Dimensione</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
