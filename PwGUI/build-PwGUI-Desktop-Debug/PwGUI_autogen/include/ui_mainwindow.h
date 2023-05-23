@@ -33,6 +33,7 @@ public:
     QAction *actionOrdine_Alfabetico;
     QAction *actionEstensione;
     QAction *actionProprietario;
+    QAction *actionDimensione;
     QWidget *centralwidget;
     QListWidget *listWidget;
     QLineEdit *lineEdit;
@@ -65,6 +66,8 @@ public:
         actionEstensione->setObjectName("actionEstensione");
         actionProprietario = new QAction(MainWindow);
         actionProprietario->setObjectName("actionProprietario");
+        actionDimensione = new QAction(MainWindow);
+        actionDimensione->setObjectName("actionDimensione");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         listWidget = new QListWidget(centralwidget);
@@ -107,6 +110,7 @@ public:
         menuOrganizza->addAction(actionOrdine_Alfabetico);
         menuOrganizza->addAction(actionEstensione);
         menuOrganizza->addAction(actionProprietario);
+        menuOrganizza->addAction(actionDimensione);
         menuHelp->addAction(actionWiki);
 
         retranslateUi(MainWindow);
@@ -125,6 +129,7 @@ public:
         actionOrdine_Alfabetico->setText(QCoreApplication::translate("MainWindow", "Ordine Alfabetico", nullptr));
         actionEstensione->setText(QCoreApplication::translate("MainWindow", "Estensione", nullptr));
         actionProprietario->setText(QCoreApplication::translate("MainWindow", "Proprietario", nullptr));
+        actionDimensione->setText(QCoreApplication::translate("MainWindow", "Dimensione", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Strumenti", nullptr));
         menuCerca->setTitle(QCoreApplication::translate("MainWindow", "Cerca", nullptr));

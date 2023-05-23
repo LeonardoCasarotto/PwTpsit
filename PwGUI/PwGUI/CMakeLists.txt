@@ -17,8 +17,10 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        searchinputdialog.h
-        searchinputdialog.cpp
+        ./dependencies/code/searchinputdialog.h
+        ./dependencies/code/searchinputdialog.cpp
+        ./dependencies/code/organize.h
+        ./dependencies/code/search.h
 
 )
 

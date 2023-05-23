@@ -1,6 +1,6 @@
 /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwindow.h \
   /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/moc_predefs.h \
-  /home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.h \
+  /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

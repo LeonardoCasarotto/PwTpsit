@@ -8,7 +8,7 @@
 #include <QPixmap>
 #include <QListWidgetItem>
 #include <QDesktopServices>
-#include "searchinputdialog.h"
+#include "./dependencies/code/searchinputdialog.h"
 #include <QMessageBox>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -42,6 +42,8 @@ private slots:
     void on_actionEstensione_triggered();
 
     void on_actionProprietario_triggered();
+
+    void on_actionDimensione_triggered();
 
 private:
     Ui::MainWindow *ui;

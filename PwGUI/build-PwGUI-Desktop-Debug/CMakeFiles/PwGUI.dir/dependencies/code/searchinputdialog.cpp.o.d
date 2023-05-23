@@ -1,9 +1,9 @@
-CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
- /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwindow.cpp \
+CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o: \
+ /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.cpp \
  /usr/include/stdc-predef.h \
- /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwindow.h \
- /usr/include/qt6/QtWidgets/QMainWindow \
- /usr/include/qt6/QtWidgets/qmainwindow.h \
+ /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.h \
+ /usr/include/qt6/QtWidgets/QInputDialog \
+ /usr/include/qt6/QtWidgets/qinputdialog.h \
  /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \
  /usr/include/qt6/QtGui/qtguiglobal.h /usr/include/qt6/QtCore/qglobal.h \
  /usr/include/c++/13.1.1/type_traits \
@@ -138,14 +138,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtGui/qtguiexports.h \
  /usr/include/qt6/QtWidgets/qtwidgets-config.h \
  /usr/include/qt6/QtWidgets/qtwidgetsexports.h \
- /usr/include/qt6/QtWidgets/qwidget.h \
- /usr/include/qt6/QtGui/qwindowdefs.h \
- /usr/include/qt6/QtCore/qobjectdefs.h \
- /usr/include/qt6/QtCore/qnamespace.h \
- /usr/include/qt6/QtCore/qtmetamacros.h \
- /usr/include/qt6/QtCore/qobjectdefs_impl.h \
- /usr/include/qt6/QtCore/qobject.h /usr/include/qt6/QtCore/qstring.h \
- /usr/include/qt6/QtCore/qchar.h /usr/include/c++/13.1.1/functional \
+ /usr/include/qt6/QtCore/qstring.h /usr/include/qt6/QtCore/qchar.h \
+ /usr/include/c++/13.1.1/functional \
  /usr/include/c++/13.1.1/bits/stl_function.h \
  /usr/include/c++/13.1.1/backward/binders.h \
  /usr/include/c++/13.1.1/bits/refwrap.h \
@@ -177,6 +171,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/c++/13.1.1/bits/stl_tempbuf.h \
  /usr/include/c++/13.1.1/cstdlib /usr/include/qt6/QtCore/qstringview.h \
  /usr/include/qt6/QtCore/qbytearray.h /usr/include/qt6/QtCore/qrefcount.h \
+ /usr/include/qt6/QtCore/qnamespace.h \
+ /usr/include/qt6/QtCore/qtmetamacros.h \
  /usr/include/qt6/QtCore/qarraydata.h /usr/include/qt6/QtCore/qpair.h \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/qt6/QtCore/qarraydatapointer.h \
@@ -260,8 +256,13 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtCore/qanystringview.h \
  /usr/include/qt6/QtCore/qutf8stringview.h \
  /usr/include/qt6/QtCore/qstringtokenizer.h \
- /usr/include/qt6/QtCore/qlist.h /usr/include/qt6/QtCore/qhashfunctions.h \
- /usr/include/c++/13.1.1/numeric \
+ /usr/include/qt6/QtWidgets/qlineedit.h \
+ /usr/include/qt6/QtWidgets/qframe.h /usr/include/qt6/QtWidgets/qwidget.h \
+ /usr/include/qt6/QtGui/qwindowdefs.h \
+ /usr/include/qt6/QtCore/qobjectdefs.h \
+ /usr/include/qt6/QtCore/qobjectdefs_impl.h \
+ /usr/include/qt6/QtCore/qobject.h /usr/include/qt6/QtCore/qlist.h \
+ /usr/include/qt6/QtCore/qhashfunctions.h /usr/include/c++/13.1.1/numeric \
  /usr/include/c++/13.1.1/bits/stl_numeric.h \
  /usr/include/c++/13.1.1/pstl/glue_numeric_defs.h \
  /usr/include/qt6/QtCore/qiterator.h \
@@ -318,94 +319,13 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtGui/qfontmetrics.h /usr/include/qt6/QtGui/qfontinfo.h \
  /usr/include/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/qt6/QtGui/qcursor.h /usr/include/qt6/QtGui/qbitmap.h \
- /usr/include/qt6/QtWidgets/qtabwidget.h /usr/include/qt6/QtCore/QDebug \
- /usr/include/qt6/QtCore/qdebug.h /usr/include/qt6/QtWidgets/QFileDialog \
- /usr/include/qt6/QtWidgets/qfiledialog.h /usr/include/qt6/QtCore/qdir.h \
- /usr/include/qt6/QtCore/qfile.h /usr/include/qt6/QtCore/qfiledevice.h \
- /usr/include/qt6/QtCore/qiodevice.h /usr/include/c++/13.1.1/filesystem \
- /usr/include/c++/13.1.1/bits/fs_fwd.h \
- /usr/include/c++/13.1.1/bits/fs_path.h /usr/include/c++/13.1.1/locale \
- /usr/include/c++/13.1.1/bits/locale_facets.h \
- /usr/include/c++/13.1.1/cwctype /usr/include/wctype.h \
- /usr/include/bits/wctype-wchar.h \
- /usr/include/c++/13.1.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
- /usr/include/c++/13.1.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
- /usr/include/c++/13.1.1/bits/locale_facets.tcc \
- /usr/include/c++/13.1.1/bits/locale_facets_nonio.h \
- /usr/include/c++/13.1.1/x86_64-pc-linux-gnu/bits/time_members.h \
- /usr/include/c++/13.1.1/x86_64-pc-linux-gnu/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/13.1.1/bits/codecvt.h \
- /usr/include/c++/13.1.1/bits/locale_facets_nonio.tcc \
- /usr/include/c++/13.1.1/bits/locale_conv.h \
- /usr/include/c++/13.1.1/iomanip \
- /usr/include/c++/13.1.1/bits/quoted_string.h \
- /usr/include/c++/13.1.1/sstream /usr/include/c++/13.1.1/istream \
- /usr/include/c++/13.1.1/ios /usr/include/c++/13.1.1/bits/basic_ios.h \
- /usr/include/c++/13.1.1/bits/basic_ios.tcc \
- /usr/include/c++/13.1.1/ostream /usr/include/c++/13.1.1/bits/ostream.tcc \
- /usr/include/c++/13.1.1/bits/istream.tcc \
- /usr/include/c++/13.1.1/bits/sstream.tcc /usr/include/c++/13.1.1/codecvt \
- /usr/include/c++/13.1.1/bits/fs_dir.h \
- /usr/include/c++/13.1.1/bits/fs_ops.h \
- /usr/include/qt6/QtCore/qfileinfo.h /usr/include/qt6/QtCore/qdatetime.h \
- /usr/include/qt6/QtCore/qcalendar.h /usr/include/qt6/QtCore/qlocale.h \
- /usr/include/qt6/QtCore/qurl.h /usr/include/qt6/QtWidgets/qdialog.h \
- /usr/include/qt6/QtWidgets/QLabel /usr/include/qt6/QtWidgets/qlabel.h \
- /usr/include/qt6/QtWidgets/qframe.h /usr/include/qt6/QtGui/qpicture.h \
- /usr/include/qt6/QtGui/qtextdocument.h /usr/include/qt6/QtGui/QPixmap \
- /usr/include/qt6/QtGui/qpixmap.h \
- /usr/include/qt6/QtWidgets/QListWidgetItem \
- /usr/include/qt6/QtWidgets/qlistwidget.h \
- /usr/include/qt6/QtWidgets/qlistview.h \
- /usr/include/qt6/QtWidgets/qabstractitemview.h \
- /usr/include/qt6/QtWidgets/qabstractscrollarea.h \
- /usr/include/qt6/QtCore/qabstractitemmodel.h \
- /usr/include/qt6/QtCore/qitemselectionmodel.h \
- /usr/include/qt6/QtWidgets/qabstractitemdelegate.h \
- /usr/include/qt6/QtWidgets/qstyleoption.h \
- /usr/include/qt6/QtWidgets/qabstractspinbox.h \
- /usr/include/qt6/QtGui/qvalidator.h \
- /usr/include/qt6/QtCore/qregularexpression.h \
- /usr/include/qt6/QtWidgets/qslider.h \
- /usr/include/qt6/QtWidgets/qabstractslider.h \
- /usr/include/qt6/QtWidgets/qstyle.h /usr/include/qt6/QtWidgets/qtabbar.h \
- /usr/include/qt6/QtWidgets/qrubberband.h \
- /usr/include/qt6/QtGui/QDesktopServices \
- /usr/include/qt6/QtGui/qdesktopservices.h \
- /home/leonardo/PwTpsit/PwGUI/PwGUI/./dependencies/code/searchinputdialog.h \
- /usr/include/qt6/QtWidgets/QInputDialog \
- /usr/include/qt6/QtWidgets/qinputdialog.h \
- /usr/include/qt6/QtWidgets/qlineedit.h \
  /usr/include/qt6/QtGui/qtextcursor.h \
+ /usr/include/qt6/QtGui/qtextdocument.h /usr/include/qt6/QtCore/qurl.h \
  /usr/include/qt6/QtGui/qtextformat.h /usr/include/qt6/QtGui/qpen.h \
  /usr/include/qt6/QtGui/qtextoption.h \
+ /usr/include/qt6/QtWidgets/qdialog.h \
  /usr/include/qt6/QtWidgets/QCheckBox \
  /usr/include/qt6/QtWidgets/qcheckbox.h \
  /usr/include/qt6/QtWidgets/qabstractbutton.h \
- /usr/include/qt6/QtWidgets/QMessageBox \
- /usr/include/qt6/QtWidgets/qmessagebox.h \
- /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/include/./ui_mainwindow.h \
- /usr/include/qt6/QtCore/QVariant /usr/include/qt6/QtCore/qvariant.h \
- /usr/include/qt6/QtGui/QAction /usr/include/qt6/QtGui/qaction.h \
- /usr/include/qt6/QtWidgets/QApplication \
- /usr/include/qt6/QtWidgets/qapplication.h \
- /usr/include/qt6/QtCore/qcoreapplication.h \
- /usr/include/qt6/QtCore/qcoreevent.h \
- /usr/include/qt6/QtCore/qeventloop.h \
- /usr/include/qt6/QtCore/qnativeinterface.h \
- /usr/include/qt6/QtCore/qcoreapplication_platform.h \
- /usr/include/qt6/QtGui/qguiapplication.h \
- /usr/include/qt6/QtGui/qinputmethod.h \
- /usr/include/qt6/QtGui/qguiapplication_platform.h \
- /usr/include/qt6/QtWidgets/QLineEdit \
- /usr/include/qt6/QtWidgets/qlineedit.h \
- /usr/include/qt6/QtWidgets/QListWidget \
- /usr/include/qt6/QtWidgets/QMainWindow /usr/include/qt6/QtWidgets/QMenu \
- /usr/include/qt6/QtWidgets/qmenu.h /usr/include/qt6/QtWidgets/QMenuBar \
- /usr/include/qt6/QtWidgets/qmenubar.h /usr/include/qt6/QtWidgets/qmenu.h \
- /usr/include/qt6/QtWidgets/QStatusBar \
- /usr/include/qt6/QtWidgets/qstatusbar.h \
- /usr/include/qt6/QtWidgets/QWidget /usr/include/qt6/QtWidgets/qwidget.h \
- /home/leonardo/PwTpsit/PwGUI/PwGUI/./dependencies/code/organize.h \
- /home/leonardo/PwTpsit/PwGUI/PwGUI/./dependencies/code/searchinputdialog.h \
- /home/leonardo/PwTpsit/PwGUI/PwGUI/./dependencies/code/search.h
+ /usr/include/qt6/QtWidgets/QLabel /usr/include/qt6/QtWidgets/qlabel.h \
+ /usr/include/qt6/QtGui/qpicture.h /usr/include/qt6/QtCore/qiodevice.h

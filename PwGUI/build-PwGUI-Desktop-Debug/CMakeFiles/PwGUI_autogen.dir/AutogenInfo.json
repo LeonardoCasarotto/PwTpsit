@@ -361,15 +361,27 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/leonardo/PwTpsit/PwGUI/PwGUI/mainwindow.h",
+			"/home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/organize.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"I2J3TJP44U/moc_organize.cpp",
 			null
 		],
 		[
-			"/home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.h",
+			"/home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/search.h",
 			"MU",
-			"EWIEGA46WW/moc_searchinputdialog.cpp",
+			"I2J3TJP44U/moc_search.cpp",
+			null
+		],
+		[
+			"/home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.h",
+			"MU",
+			"I2J3TJP44U/moc_searchinputdialog.cpp",
+			null
+		],
+		[
+			"/home/leonardo/PwTpsit/PwGUI/PwGUI/mainwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
 		]
 	],
@@ -430,13 +442,13 @@
 	"SETTINGS_FILE" : "/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/PwGUI_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/leonardo/PwTpsit/PwGUI/PwGUI/main.cpp", "MU", null ],
-		[ "/home/leonardo/PwTpsit/PwGUI/PwGUI/mainwindow.cpp", "MU", null ],
 		[
-			"/home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.cpp",
+			"/home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.cpp",
 			"MU",
 			null
-		]
+		],
+		[ "/home/leonardo/PwTpsit/PwGUI/PwGUI/main.cpp", "MU", null ],
+		[ "/home/leonardo/PwTpsit/PwGUI/PwGUI/mainwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

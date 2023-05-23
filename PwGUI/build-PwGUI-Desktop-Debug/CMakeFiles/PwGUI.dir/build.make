@@ -111,26 +111,26 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PwGUI.dir/mainwindow.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwindow.cpp -o CMakeFiles/PwGUI.dir/mainwindow.cpp.s
 
-CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o: CMakeFiles/PwGUI.dir/flags.make
-CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.cpp
-CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o: CMakeFiles/PwGUI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o -MF CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o.d -o CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o -c /home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.cpp
+CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o: CMakeFiles/PwGUI.dir/flags.make
+CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.cpp
+CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o: CMakeFiles/PwGUI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o -MF CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o.d -o CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o -c /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.cpp
 
-CMakeFiles/PwGUI.dir/searchinputdialog.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PwGUI.dir/searchinputdialog.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.cpp > CMakeFiles/PwGUI.dir/searchinputdialog.cpp.i
+CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.cpp > CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.i
 
-CMakeFiles/PwGUI.dir/searchinputdialog.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PwGUI.dir/searchinputdialog.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.cpp -o CMakeFiles/PwGUI.dir/searchinputdialog.cpp.s
+CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.cpp -o CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.s
 
 # Object files for target PwGUI
 PwGUI_OBJECTS = \
 "CMakeFiles/PwGUI.dir/PwGUI_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/PwGUI.dir/main.cpp.o" \
 "CMakeFiles/PwGUI.dir/mainwindow.cpp.o" \
-"CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o"
+"CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o"
 
 # External object files for target PwGUI
 PwGUI_EXTERNAL_OBJECTS =
@@ -138,7 +138,7 @@ PwGUI_EXTERNAL_OBJECTS =
 PwGUI: CMakeFiles/PwGUI.dir/PwGUI_autogen/mocs_compilation.cpp.o
 PwGUI: CMakeFiles/PwGUI.dir/main.cpp.o
 PwGUI: CMakeFiles/PwGUI.dir/mainwindow.cpp.o
-PwGUI: CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o
+PwGUI: CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o
 PwGUI: CMakeFiles/PwGUI.dir/build.make
 PwGUI: /usr/lib/libQt6Widgets.so.6.5.0
 PwGUI: /usr/lib/libQt6Gui.so.6.5.0

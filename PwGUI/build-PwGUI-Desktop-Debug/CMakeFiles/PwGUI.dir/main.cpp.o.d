@@ -371,7 +371,7 @@ CMakeFiles/PwGUI.dir/main.cpp.o: \
  /usr/include/qt6/QtWidgets/qrubberband.h \
  /usr/include/qt6/QtGui/QDesktopServices \
  /usr/include/qt6/QtGui/qdesktopservices.h \
- /home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.h \
+ /home/leonardo/PwTpsit/PwGUI/PwGUI/./dependencies/code/searchinputdialog.h \
  /usr/include/qt6/QtWidgets/QInputDialog \
  /usr/include/qt6/QtWidgets/qinputdialog.h \
  /usr/include/qt6/QtWidgets/qlineedit.h \

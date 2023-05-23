@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-c9d88d80ef076052ba79.json",
+					"jsonFile" : "directory-.-Debug-e63a534cb6a00e3653ac.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -42,7 +42,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "PwGUI::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PwGUI-Debug-750f1616bb5bfd034e85.json",
+					"jsonFile" : "target-PwGUI-Debug-9d6ea5b53f40d78d2c7f.json",
 					"name" : "PwGUI",
 					"projectIndex" : 0
 				},

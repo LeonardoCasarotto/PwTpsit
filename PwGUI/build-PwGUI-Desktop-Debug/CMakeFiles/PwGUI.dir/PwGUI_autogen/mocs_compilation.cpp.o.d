@@ -373,7 +373,7 @@ CMakeFiles/PwGUI.dir/PwGUI_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtWidgets/qrubberband.h \
  /usr/include/qt6/QtGui/QDesktopServices \
  /usr/include/qt6/QtGui/qdesktopservices.h \
- /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/EWIEGA46WW/../../../PwGUI/searchinputdialog.h \
+ /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/EWIEGA46WW/../../../PwGUI/./dependencies/code/searchinputdialog.h \
  /usr/include/qt6/QtWidgets/QInputDialog \
  /usr/include/qt6/QtWidgets/qinputdialog.h \
  /usr/include/qt6/QtWidgets/qlineedit.h \

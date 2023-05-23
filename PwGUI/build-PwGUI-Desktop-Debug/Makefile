@@ -211,6 +211,30 @@ PwGUI_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/PwGUI_autogen/mocs_compilation.cpp.s
 .PHONY : PwGUI_autogen/mocs_compilation.cpp.s
 
+dependencies/code/searchinputdialog.o: dependencies/code/searchinputdialog.cpp.o
+.PHONY : dependencies/code/searchinputdialog.o
+
+# target to build an object file
+dependencies/code/searchinputdialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o
+.PHONY : dependencies/code/searchinputdialog.cpp.o
+
+dependencies/code/searchinputdialog.i: dependencies/code/searchinputdialog.cpp.i
+.PHONY : dependencies/code/searchinputdialog.i
+
+# target to preprocess a source file
+dependencies/code/searchinputdialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.i
+.PHONY : dependencies/code/searchinputdialog.cpp.i
+
+dependencies/code/searchinputdialog.s: dependencies/code/searchinputdialog.cpp.s
+.PHONY : dependencies/code/searchinputdialog.s
+
+# target to generate assembly for a file
+dependencies/code/searchinputdialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.s
+.PHONY : dependencies/code/searchinputdialog.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -259,30 +283,6 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
-searchinputdialog.o: searchinputdialog.cpp.o
-.PHONY : searchinputdialog.o
-
-# target to build an object file
-searchinputdialog.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o
-.PHONY : searchinputdialog.cpp.o
-
-searchinputdialog.i: searchinputdialog.cpp.i
-.PHONY : searchinputdialog.i
-
-# target to preprocess a source file
-searchinputdialog.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/searchinputdialog.cpp.i
-.PHONY : searchinputdialog.cpp.i
-
-searchinputdialog.s: searchinputdialog.cpp.s
-.PHONY : searchinputdialog.s
-
-# target to generate assembly for a file
-searchinputdialog.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PwGUI.dir/build.make CMakeFiles/PwGUI.dir/searchinputdialog.cpp.s
-.PHONY : searchinputdialog.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -300,15 +300,15 @@ help:
 	@echo "... PwGUI_autogen/mocs_compilation.o"
 	@echo "... PwGUI_autogen/mocs_compilation.i"
 	@echo "... PwGUI_autogen/mocs_compilation.s"
+	@echo "... dependencies/code/searchinputdialog.o"
+	@echo "... dependencies/code/searchinputdialog.i"
+	@echo "... dependencies/code/searchinputdialog.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
-	@echo "... searchinputdialog.o"
-	@echo "... searchinputdialog.i"
-	@echo "... searchinputdialog.s"
 .PHONY : help
 
 

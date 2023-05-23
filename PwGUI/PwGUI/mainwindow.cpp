@@ -1,267 +1,20 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "searchinputdialog.h"
+#include "./dependencies/code/searchinputdialog.h"
+#include "./dependencies/code/organize.h"
+#include "./dependencies/code/search.h"
 
 
 QDir current;
 
-//ricerca files per nome punto 1
-QVector<QString> dfsFileSearchByName(const QDir& dir, const QString& filename)
-{
-    QVector<QString> toReturn;
 
-    // Check if the current file name matches the searched name
-    QStringList files = dir.entryList(QStringList() << "*", QDir::Files);
 
-    foreach (const QString& file, files) {
-        if (file.contains(filename)) {
-
-
-
-            toReturn.append(dir.absoluteFilePath(file));
-
-        }
-    }
-
-    // Perform DFS search in subdirectories
-    QStringList subdirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    foreach (const QString& subdirectory, subdirectories) {
-        QDir newPath = dir;
-        newPath.cd(subdirectory);
-        QVector<QString> filePaths = dfsFileSearchByName(newPath, filename);
-        if (!filePaths.isEmpty()) {
-            toReturn += filePaths;
-        }
-    }
-
-    // Return the found file paths
-    return toReturn;
-}
-
-QVector<QString> simpleSearchByName(const QDir& dir, const QString& filename)
-{
-    QVector<QString> toReturn;
-    foreach (QFileInfo v, dir.entryInfoList())
-    {
-        if(v.fileName().contains(filename))
-        {
-            toReturn.append(v.absoluteFilePath());
-
-        }
-
-    }
-    return toReturn;
-
-}
-//fine funzioni punto uno
-
-//inizio funzioni punto due -> cerca per estensione
-
-QVector<QString> dfsFileSearchByExtension(const QDir& dir, const QString& extension)
-{
-    QVector<QString> toReturn;
-
-
-    QStringList files = dir.entryList(QStringList() << "*", QDir::Files);
-
-    foreach (const QString& file, files) {
-        QFileInfo fileInfo(dir.absoluteFilePath(file));
-        if (fileInfo.suffix() == extension) {
-            toReturn.append(fileInfo.absoluteFilePath());
-        }
-    }
-
-
-    QStringList subdirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    foreach (const QString& subdirectory, subdirectories) {
-        QDir newPath = dir;
-        newPath.cd(subdirectory);
-        QVector<QString> filePaths = dfsFileSearchByExtension(newPath, extension);
-        if (!filePaths.isEmpty()) {
-            toReturn += filePaths;
-        }
-    }
-
-    return toReturn;
-}
-
-QVector<QString> simpleSearchByExtension(const QDir& dir, const QString& extension)
-{
-    QVector<QString> toReturn;
-    foreach (QFileInfo v, dir.entryInfoList())
-    {
-        if(v.suffix()==extension)
-        {
-            toReturn.append(v.absoluteFilePath());
-
-        }
-
-    }
-    return toReturn;
-
-}
-//fine funzioni punto due
-
-//inizio funzioni punto tre
-QVector<QString> dfsFileSearchByContent(const QDir& dir, const QString& word)
-{
-    QVector<QString> toReturn;
-
-
-    QStringList files = dir.entryList(QStringList() << "*.txt", QDir::Files);  // Only search for .txt files
-
-    foreach (const QString& file, files) {
-        QString filePath = dir.filePath(file);
-        QFile inputFile(filePath);
-        if (inputFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            QTextStream in(&inputFile);
-            QString fileContents = in.readAll();
-            if (fileContents.contains(word)) {
-                toReturn.append(filePath);
-            }
-            inputFile.close();
-        }
-    }
-
-
-    QStringList subdirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    foreach (const QString& subdirectory, subdirectories) {
-        QDir newPath = dir;
-        newPath.cd(subdirectory);
-        QVector<QString> filePaths = dfsFileSearchByContent(newPath, word);
-        if (!filePaths.isEmpty()) {
-            toReturn += filePaths;
-        }
-    }
-
-
-    return toReturn;
-}
-
-
-QVector<QString> simpleSearchByContent(const QDir& dir, const QString& word){
-
-     QStringList files = dir.entryList(QStringList() << "*.txt", QDir::Files);  // Only search for .txt files
-    QVector<QString> toReturn;
-
-    foreach (const QString& file, files) {
-        QString filePath = dir.filePath(file);
-        QFile inputFile(filePath);
-        if (inputFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            QTextStream in(&inputFile);
-            QString fileContents = in.readAll();
-            if (fileContents.contains(word)) {
-                toReturn.append(filePath);
-            }
-            inputFile.close();
-        }
-    }
-
-    return toReturn;
-
-}
-//fine funzioni punto tre
-
-void organizeFilesByAlphabet(const QDir& baseDir)
-{
-
-    if (!baseDir.exists()) {
-
-        return;
-    }
-
-
-    QStringList fileNames = baseDir.entryList(QDir::Files);
-
-
-    for (char letter = 'A'; letter <= 'Z'; ++letter) {
-        QString letterFolderName = QString(letter);
-        baseDir.mkdir(letterFolderName);
-    }
-
-
-    foreach (const QString& fileName, fileNames) {
-        QFileInfo fileInfo(baseDir.filePath(fileName));
-        QString letterFolderName = fileInfo.fileName().at(0).toUpper();
-        QString destinationFolder = baseDir.filePath(letterFolderName);
-
-        if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
-            QMessageBox err;
-            err.setText("trasferimento non riuscito");
-            err.exec();
-        }
-    }
-}
-
-//organizzare i file in cartelle in base all' estensione
-
-void organizeFilesByType(const QDir& baseDir)
-{
-    QVector<QString> extensions;
-
-
-    foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
-        QString extension = fileInfo.suffix();
-        if (!extensions.contains(extension)) {
-            extensions.append(extension);
-            baseDir.mkdir(extension);
-        }
-    }
-
-    foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
-        QString extension = fileInfo.suffix();
-        QString destinationFolder = baseDir.filePath(extension);
-
-        if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
-
-            QMessageBox err;
-            err.setText("trasferimento non riuscito");
-            err.exec();
-        }
-    }
-}
-
-
-//organizzo file in base al proprietario
-
-void organizeFilesByOwner(const QDir& baseDir)
-{
-    QVector<QString> owners;
-
-    foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
-
-        if (!owners.contains(fileInfo.owner())) {
-            owners.append(fileInfo.owner());
-            baseDir.mkdir(fileInfo.owner());
-        }
-    }
-
-    foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
-
-        QString destinationFolder = baseDir.filePath(fileInfo.owner());
-
-        if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
-
-            QMessageBox err;
-            err.setText("trasferimento non riuscito");
-            err.exec();
-        }
-    }
-
-}
-
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
 
     on_actionScegli_nuova_directory_triggered();
-
-
-
 
 }
 
@@ -319,10 +72,6 @@ void MainWindow::updateDirectory(const QVector<QString>&files)
         if (qi.fileName() != "." && qi.fileName() != "..") {
             ui->listWidget->addItem(item);
         }
-
-
-
-
     }
 
 }
@@ -509,6 +258,13 @@ void MainWindow::on_actionEstensione_triggered()
 void MainWindow::on_actionProprietario_triggered()
 {
     organizeFilesByOwner(current);
+    displayDirectory(current.absolutePath());
+}
+
+
+void MainWindow::on_actionDimensione_triggered()
+{
+    organizeFilesBySize(current);
     displayDirectory(current.absolutePath());
 }
 
