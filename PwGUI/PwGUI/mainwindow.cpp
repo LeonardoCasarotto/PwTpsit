@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include "searchinputdialog.h"
 
+
 QDir current;
 
 //ricerca files per nome punto 1
@@ -161,8 +162,6 @@ QVector<QString> simpleSearchByContent(const QDir& dir, const QString& word){
 }
 //fine funzioni punto tre
 
-//organizzare i file in ordine alfabetico, suddividendoli in cartelle
-
 void organizeFilesByAlphabet(const QDir& baseDir)
 {
 
@@ -223,7 +222,33 @@ void organizeFilesByType(const QDir& baseDir)
 }
 
 
+//organizzo file in base al proprietario
 
+void organizeFilesByOwner(const QDir& baseDir)
+{
+    QVector<QString> owners;
+
+    foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
+
+        if (!owners.contains(fileInfo.owner())) {
+            owners.append(fileInfo.owner());
+            baseDir.mkdir(fileInfo.owner());
+        }
+    }
+
+    foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
+
+        QString destinationFolder = baseDir.filePath(fileInfo.owner());
+
+        if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
+
+            QMessageBox err;
+            err.setText("trasferimento non riuscito");
+            err.exec();
+        }
+    }
+
+}
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -475,6 +500,15 @@ void MainWindow::on_actionOrdine_Alfabetico_triggered()
 void MainWindow::on_actionEstensione_triggered()
 {
     organizeFilesByType(current);
+    displayDirectory(current.absolutePath());
+}
+
+
+
+
+void MainWindow::on_actionProprietario_triggered()
+{
+    organizeFilesByOwner(current);
     displayDirectory(current.absolutePath());
 }
 

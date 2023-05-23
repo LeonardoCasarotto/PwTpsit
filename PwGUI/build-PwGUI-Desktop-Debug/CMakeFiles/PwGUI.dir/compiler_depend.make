@@ -1545,7 +1545,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/qt6/QtWidgets/QStatusBar \
   /usr/include/qt6/QtWidgets/qstatusbar.h \
   /usr/include/qt6/QtWidgets/QWidget \
-  /usr/include/qt6/QtWidgets/qwidget.h
+  /usr/include/qt6/QtWidgets/qwidget.h \
+  /home/leonardo/PwTpsit/PwGUI/PwGUI/organize.cpp
 
 CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/searchinputdialog.cpp \
   /usr/include/stdc-predef.h \
@@ -2675,6 +2676,8 @@ PwGUI_autogen/mocs_compilation.cpp:
 /usr/include/qt6/QtCore/qtcoreexports.h:
 
 /usr/include/c++/13.1.1/vector:
+
+/home/leonardo/PwTpsit/PwGUI/PwGUI/organize.cpp:
 
 /usr/include/c++/13.1.1/cctype:
 

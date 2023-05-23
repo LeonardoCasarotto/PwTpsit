@@ -72,6 +72,7 @@
      </property>
      <addaction name="actionOrdine_Alfabetico"/>
      <addaction name="actionEstensione"/>
+     <addaction name="actionProprietario"/>
     </widget>
     <addaction name="menuCerca"/>
     <addaction name="menuOrganizza"/>
@@ -121,6 +122,11 @@
   <action name="actionEstensione">
    <property name="text">
     <string>Estensione</string>
+   </property>
+  </action>
+  <action name="actionProprietario">
+   <property name="text">
+    <string>Proprietario</string>
    </property>
   </action>
  </widget>

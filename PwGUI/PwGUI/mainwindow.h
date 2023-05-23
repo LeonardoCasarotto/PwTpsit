@@ -41,6 +41,8 @@ private slots:
 
     void on_actionEstensione_triggered();
 
+    void on_actionProprietario_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
