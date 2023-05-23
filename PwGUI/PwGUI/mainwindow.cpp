@@ -163,7 +163,6 @@ QVector<QString> simpleSearchByContent(const QDir& dir, const QString& word){
 
 //organizzare i file in ordine alfabetico, suddividendoli in cartelle
 
-
 void organizeFilesByAlphabet(const QDir& baseDir)
 {
 
@@ -194,6 +193,35 @@ void organizeFilesByAlphabet(const QDir& baseDir)
         }
     }
 }
+
+//organizzare i file in cartelle in base all' estensione
+
+void organizeFilesByType(const QDir& baseDir)
+{
+    QVector<QString> extensions;
+
+
+    foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
+        QString extension = fileInfo.suffix();
+        if (!extensions.contains(extension)) {
+            extensions.append(extension);
+            baseDir.mkdir(extension);
+        }
+    }
+
+    foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
+        QString extension = fileInfo.suffix();
+        QString destinationFolder = baseDir.filePath(extension);
+
+        if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
+
+            QMessageBox err;
+            err.setText("trasferimento non riuscito");
+            err.exec();
+        }
+    }
+}
+
 
 
 
@@ -440,6 +468,13 @@ void MainWindow::on_actionPer_contenuto_triggered()
 void MainWindow::on_actionOrdine_Alfabetico_triggered()
 {
     organizeFilesByAlphabet(current);
+    displayDirectory(current.absolutePath());
+}
+
+
+void MainWindow::on_actionEstensione_triggered()
+{
+    organizeFilesByType(current);
     displayDirectory(current.absolutePath());
 }
 

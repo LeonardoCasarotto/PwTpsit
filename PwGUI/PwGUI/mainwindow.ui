@@ -71,6 +71,7 @@
       <string>Organizza</string>
      </property>
      <addaction name="actionOrdine_Alfabetico"/>
+     <addaction name="actionEstensione"/>
     </widget>
     <addaction name="menuCerca"/>
     <addaction name="menuOrganizza"/>
@@ -115,6 +116,11 @@
   <action name="actionOrdine_Alfabetico">
    <property name="text">
     <string>Ordine Alfabetico</string>
+   </property>
+  </action>
+  <action name="actionEstensione">
+   <property name="text">
+    <string>Estensione</string>
    </property>
   </action>
  </widget>

@@ -31,6 +31,7 @@ public:
     QAction *actionPer_contenuto;
     QAction *actionScegli_nuova_directory;
     QAction *actionOrdine_Alfabetico;
+    QAction *actionEstensione;
     QWidget *centralwidget;
     QListWidget *listWidget;
     QLineEdit *lineEdit;
@@ -59,6 +60,8 @@ public:
         actionScegli_nuova_directory->setObjectName("actionScegli_nuova_directory");
         actionOrdine_Alfabetico = new QAction(MainWindow);
         actionOrdine_Alfabetico->setObjectName("actionOrdine_Alfabetico");
+        actionEstensione = new QAction(MainWindow);
+        actionEstensione->setObjectName("actionEstensione");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         listWidget = new QListWidget(centralwidget);
@@ -99,6 +102,7 @@ public:
         menuCerca->addAction(actionPer_Estensione);
         menuCerca->addAction(actionPer_contenuto);
         menuOrganizza->addAction(actionOrdine_Alfabetico);
+        menuOrganizza->addAction(actionEstensione);
         menuHelp->addAction(actionWiki);
 
         retranslateUi(MainWindow);
@@ -115,6 +119,7 @@ public:
         actionPer_contenuto->setText(QCoreApplication::translate("MainWindow", "Per Contenuto", nullptr));
         actionScegli_nuova_directory->setText(QCoreApplication::translate("MainWindow", "Scegli nuova directory", nullptr));
         actionOrdine_Alfabetico->setText(QCoreApplication::translate("MainWindow", "Ordine Alfabetico", nullptr));
+        actionEstensione->setText(QCoreApplication::translate("MainWindow", "Estensione", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Strumenti", nullptr));
         menuCerca->setTitle(QCoreApplication::translate("MainWindow", "Cerca", nullptr));

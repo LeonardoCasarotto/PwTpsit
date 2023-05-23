@@ -39,6 +39,8 @@ private slots:
 
     void on_actionOrdine_Alfabetico_triggered();
 
+    void on_actionEstensione_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
