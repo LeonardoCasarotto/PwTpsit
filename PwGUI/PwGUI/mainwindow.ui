@@ -29,7 +29,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>331</width>
+      <width>861</width>
       <height>20</height>
      </rect>
     </property>
@@ -66,7 +66,14 @@
      <addaction name="actionPer_Estensione"/>
      <addaction name="actionPer_contenuto"/>
     </widget>
+    <widget class="QMenu" name="menuOrganizza">
+     <property name="title">
+      <string>Organizza</string>
+     </property>
+     <addaction name="actionOrdine_Alfabetico"/>
+    </widget>
     <addaction name="menuCerca"/>
+    <addaction name="menuOrganizza"/>
     <addaction name="actionScegli_nuova_directory"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
@@ -103,6 +110,11 @@
   <action name="actionScegli_nuova_directory">
    <property name="text">
     <string>Scegli nuova directory</string>
+   </property>
+  </action>
+  <action name="actionOrdine_Alfabetico">
+   <property name="text">
+    <string>Ordine Alfabetico</string>
    </property>
   </action>
  </widget>

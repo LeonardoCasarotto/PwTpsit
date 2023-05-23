@@ -37,6 +37,8 @@ private slots:
 
     void on_actionPer_contenuto_triggered();
 
+    void on_actionOrdine_Alfabetico_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -30,6 +30,7 @@ public:
     QAction *actionPer_Estensione;
     QAction *actionPer_contenuto;
     QAction *actionScegli_nuova_directory;
+    QAction *actionOrdine_Alfabetico;
     QWidget *centralwidget;
     QListWidget *listWidget;
     QLineEdit *lineEdit;
@@ -37,6 +38,7 @@ public:
     QMenu *menuFile;
     QMenu *menuEdit;
     QMenu *menuCerca;
+    QMenu *menuOrganizza;
     QMenu *menuHelp;
     QStatusBar *statusbar;
 
@@ -55,6 +57,8 @@ public:
         actionPer_contenuto->setObjectName("actionPer_contenuto");
         actionScegli_nuova_directory = new QAction(MainWindow);
         actionScegli_nuova_directory->setObjectName("actionScegli_nuova_directory");
+        actionOrdine_Alfabetico = new QAction(MainWindow);
+        actionOrdine_Alfabetico->setObjectName("actionOrdine_Alfabetico");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         listWidget = new QListWidget(centralwidget);
@@ -62,7 +66,7 @@ public:
         listWidget->setGeometry(QRect(0, 20, 861, 571));
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(0, 0, 331, 20));
+        lineEdit->setGeometry(QRect(0, 0, 861, 20));
         lineEdit->setReadOnly(true);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -74,6 +78,8 @@ public:
         menuEdit->setObjectName("menuEdit");
         menuCerca = new QMenu(menuEdit);
         menuCerca->setObjectName("menuCerca");
+        menuOrganizza = new QMenu(menuEdit);
+        menuOrganizza->setObjectName("menuOrganizza");
         menuHelp = new QMenu(menubar);
         menuHelp->setObjectName("menuHelp");
         MainWindow->setMenuBar(menubar);
@@ -85,12 +91,14 @@ public:
         menubar->addAction(menuEdit->menuAction());
         menubar->addAction(menuHelp->menuAction());
         menuEdit->addAction(menuCerca->menuAction());
+        menuEdit->addAction(menuOrganizza->menuAction());
         menuEdit->addAction(actionScegli_nuova_directory);
         menuCerca->addSeparator();
         menuCerca->addSeparator();
         menuCerca->addAction(actionper_nome);
         menuCerca->addAction(actionPer_Estensione);
         menuCerca->addAction(actionPer_contenuto);
+        menuOrganizza->addAction(actionOrdine_Alfabetico);
         menuHelp->addAction(actionWiki);
 
         retranslateUi(MainWindow);
@@ -106,9 +114,11 @@ public:
         actionPer_Estensione->setText(QCoreApplication::translate("MainWindow", "Per Estensione", nullptr));
         actionPer_contenuto->setText(QCoreApplication::translate("MainWindow", "Per Contenuto", nullptr));
         actionScegli_nuova_directory->setText(QCoreApplication::translate("MainWindow", "Scegli nuova directory", nullptr));
+        actionOrdine_Alfabetico->setText(QCoreApplication::translate("MainWindow", "Ordine Alfabetico", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Strumenti", nullptr));
         menuCerca->setTitle(QCoreApplication::translate("MainWindow", "Cerca", nullptr));
+        menuOrganizza->setTitle(QCoreApplication::translate("MainWindow", "Organizza", nullptr));
         menuHelp->setTitle(QCoreApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi
 

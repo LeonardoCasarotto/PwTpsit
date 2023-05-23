@@ -159,8 +159,41 @@ QVector<QString> simpleSearchByContent(const QDir& dir, const QString& word){
     return toReturn;
 
 }
+//fine funzioni punto tre
+
+//organizzare i file in ordine alfabetico, suddividendoli in cartelle
 
 
+void organizeFilesByAlphabet(const QDir& baseDir)
+{
+
+    if (!baseDir.exists()) {
+
+        return;
+    }
+
+
+    QStringList fileNames = baseDir.entryList(QDir::Files);
+
+
+    for (char letter = 'A'; letter <= 'Z'; ++letter) {
+        QString letterFolderName = QString(letter);
+        baseDir.mkdir(letterFolderName);
+    }
+
+
+    foreach (const QString& fileName, fileNames) {
+        QFileInfo fileInfo(baseDir.filePath(fileName));
+        QString letterFolderName = fileInfo.fileName().at(0).toUpper();
+        QString destinationFolder = baseDir.filePath(letterFolderName);
+
+        if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
+            QMessageBox err;
+            err.setText("trasferimento non riuscito");
+            err.exec();
+        }
+    }
+}
 
 
 
@@ -248,6 +281,7 @@ void MainWindow::displayDirectory(const QString& newText)
     QDir dir(newText);
 
     //read directory
+    ui->listWidget->clear();
     foreach (QFileInfo v, dir.entryInfoList()) {
 
 
@@ -400,5 +434,12 @@ void MainWindow::on_actionPer_contenuto_triggered()
     updateDirectory(result);
 
     return;
+}
+
+
+void MainWindow::on_actionOrdine_Alfabetico_triggered()
+{
+    organizeFilesByAlphabet(current);
+    displayDirectory(current.absolutePath());
 }
 
