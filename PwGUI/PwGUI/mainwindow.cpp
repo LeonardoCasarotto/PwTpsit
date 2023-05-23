@@ -268,3 +268,9 @@ void MainWindow::on_actionDimensione_triggered()
     displayDirectory(current.absolutePath());
 }
 
+
+void MainWindow::on_actionRicarica_triggered()
+{
+    displayDirectory(current.absolutePath());
+}
+

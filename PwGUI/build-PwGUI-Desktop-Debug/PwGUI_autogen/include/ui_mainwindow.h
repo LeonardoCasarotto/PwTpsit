@@ -34,6 +34,7 @@ public:
     QAction *actionEstensione;
     QAction *actionProprietario;
     QAction *actionDimensione;
+    QAction *actionRicarica;
     QWidget *centralwidget;
     QListWidget *listWidget;
     QLineEdit *lineEdit;
@@ -68,6 +69,8 @@ public:
         actionProprietario->setObjectName("actionProprietario");
         actionDimensione = new QAction(MainWindow);
         actionDimensione->setObjectName("actionDimensione");
+        actionRicarica = new QAction(MainWindow);
+        actionRicarica->setObjectName("actionRicarica");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         listWidget = new QListWidget(centralwidget);
@@ -102,6 +105,7 @@ public:
         menuEdit->addAction(menuCerca->menuAction());
         menuEdit->addAction(menuOrganizza->menuAction());
         menuEdit->addAction(actionScegli_nuova_directory);
+        menuEdit->addAction(actionRicarica);
         menuCerca->addSeparator();
         menuCerca->addSeparator();
         menuCerca->addAction(actionper_nome);
@@ -130,6 +134,7 @@ public:
         actionEstensione->setText(QCoreApplication::translate("MainWindow", "Estensione", nullptr));
         actionProprietario->setText(QCoreApplication::translate("MainWindow", "Proprietario", nullptr));
         actionDimensione->setText(QCoreApplication::translate("MainWindow", "Dimensione", nullptr));
+        actionRicarica->setText(QCoreApplication::translate("MainWindow", "Ricarica Cartelle", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Strumenti", nullptr));
         menuCerca->setTitle(QCoreApplication::translate("MainWindow", "Cerca", nullptr));

@@ -45,6 +45,8 @@ private slots:
 
     void on_actionDimensione_triggered();
 
+    void on_actionRicarica_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
