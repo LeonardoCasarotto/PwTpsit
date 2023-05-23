@@ -1,8 +1,0 @@
-/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/PwGUI.dir
-/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/list_install_components.dir
-/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/install.dir
-/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/install/local.dir
-/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/install/strip.dir
-/home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/CMakeFiles/PwGUI_autogen.dir
