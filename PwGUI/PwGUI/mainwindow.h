@@ -23,6 +23,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void displayDirectory(const QString& newText);
+    void updateDirectory(const QVector<QString>&files);
 
 
 private slots:
@@ -30,7 +31,10 @@ private slots:
 
     void on_actionper_nome_triggered();
 
+    void on_actionPer_Estensione_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
+

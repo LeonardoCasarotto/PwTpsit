@@ -92,9 +92,9 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         actionWiki->setText(QCoreApplication::translate("MainWindow", "Wiki", nullptr));
-        actionper_nome->setText(QCoreApplication::translate("MainWindow", "Per nome", nullptr));
+        actionper_nome->setText(QCoreApplication::translate("MainWindow", "Per Nome", nullptr));
         actionPer_Estensione->setText(QCoreApplication::translate("MainWindow", "Per Estensione", nullptr));
-        actionPer_contenuto->setText(QCoreApplication::translate("MainWindow", "Per contenuto", nullptr));
+        actionPer_contenuto->setText(QCoreApplication::translate("MainWindow", "Per Contenuto", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuCerca->setTitle(QCoreApplication::translate("MainWindow", "Cerca", nullptr));

@@ -4,6 +4,109 @@
 
 QDir current;
 
+//ricerca files per nome punto 1
+QVector<QString> dfsFileSearchByName(const QDir& dir, const QString& filename)
+{
+    QVector<QString> toReturn;
+
+    // Check if the current file name matches the searched name
+    QStringList files = dir.entryList(QStringList() << "*", QDir::Files);
+
+    foreach (const QString& file, files) {
+        if (file.contains(filename)) {
+
+
+
+            toReturn.append(dir.absoluteFilePath(file));
+
+        }
+    }
+
+    // Perform DFS search in subdirectories
+    QStringList subdirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    foreach (const QString& subdirectory, subdirectories) {
+        QDir newPath = dir;
+        newPath.cd(subdirectory);
+        QVector<QString> filePaths = dfsFileSearchByName(newPath, filename);
+        if (!filePaths.isEmpty()) {
+            toReturn += filePaths;
+        }
+    }
+
+    // Return the found file paths
+    return toReturn;
+}
+
+QVector<QString> simpleSearchByName(const QDir& dir, const QString& filename)
+{
+    QVector<QString> toReturn;
+    foreach (QFileInfo v, dir.entryInfoList())
+    {
+        if(v.fileName().contains(filename))
+        {
+            toReturn.append(v.absoluteFilePath());
+
+        }
+
+    }
+    return toReturn;
+
+}
+//fine funzioni punto uno
+
+//inizio funzioni punto due -> cerca per estensione
+
+QVector<QString> dfsFileSearchByExtension(const QDir& dir, const QString& extension)
+{
+    QVector<QString> toReturn;
+
+
+    QStringList files = dir.entryList(QStringList() << "*", QDir::Files);
+
+    foreach (const QString& file, files) {
+        QFileInfo fileInfo(dir.absoluteFilePath(file));
+        if (fileInfo.suffix() == extension) {
+            toReturn.append(fileInfo.absoluteFilePath());
+        }
+    }
+
+
+    QStringList subdirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    foreach (const QString& subdirectory, subdirectories) {
+        QDir newPath = dir;
+        newPath.cd(subdirectory);
+        QVector<QString> filePaths = dfsFileSearchByExtension(newPath, extension);
+        if (!filePaths.isEmpty()) {
+            toReturn += filePaths;
+        }
+    }
+
+    return toReturn;
+}
+
+QVector<QString> simpleSearchByExtension(const QDir& dir, const QString& extension)
+{
+    QVector<QString> toReturn;
+    foreach (QFileInfo v, dir.entryInfoList())
+    {
+        if(v.suffix()==extension)
+        {
+            toReturn.append(v.absoluteFilePath());
+
+        }
+
+    }
+    return toReturn;
+
+}
+//fine funzioni punto due
+
+
+
+
+
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -30,6 +133,63 @@ MainWindow::~MainWindow()
 }
 
 
+
+//aggiorna con i risultati ottenuti
+void MainWindow::updateDirectory(const QVector<QString>&files)
+{
+    ui->listWidget->clear();
+
+    for(const QString& fPath : files)
+    {
+        QFileInfo qi(fPath);
+
+        QPixmap img;
+        if(qi.suffix() =="txt"||qi.suffix()=="rtf"||qi.suffix()=="docx"||qi.suffix()=="doc"||qi.suffix()=="log"||qi.suffix()=="odt"||qi.suffix()=="csv"||qi.suffix()=="tsv"||qi.suffix()=="md"||qi.suffix()=="json"){
+
+            img.load("../PwGUI/dependencies/icons/documentFile.png");
+        }
+
+        else if(qi.suffix()=="png"||qi.suffix()=="ico"||qi.suffix()=="svg"||qi.suffix()=="raw"||qi.suffix()=="gif"||qi.suffix()=="jpg"||qi.suffix()=="jpeg"||qi.suffix()=="heic"||qi.suffix()=="heif"||qi.suffix()=="webp"){
+            img.load("../PwGUI/dependencies/icons/image.png");
+        }
+        else if(qi.suffix()=="cpp"||qi.suffix()=="h"||qi.suffix()=="hpp"||qi.suffix()=="c"||qi.suffix()=="js"||qi.suffix()=="html"||qi.suffix()=="rb"||qi.suffix()=="css"||qi.suffix()=="cs"||qi.suffix()=="php"||qi.suffix()=="java"||qi.suffix()=="asm"||qi.suffix()=="sh"||qi.suffix()=="bat"){
+            img.load("../PwGUI/dependencies/icons/codeFile.png");
+        }
+        else if(qi.suffix()=="zip"||qi.suffix()=="tar"||qi.suffix()=="gz"||qi.suffix()=="7z"){
+            img.load("../PwGUI/dependencies/icons/compressedFolder.png");
+        }
+        else if(qi.suffix()=="pdf"){
+            img.load("../PwGUI/dependencies/icons/pdfFile.png");
+        }
+        else if(qi.isDir()){
+            QDir folderDir(qi.absoluteFilePath());
+            if(folderDir.isEmpty()){
+                img.load("../PwGUI/dependencies/icons/emptyFolder.png");
+            }
+            else{
+                img.load("../PwGUI/dependencies/icons/fullFolder.png");
+            }
+        }
+        else{
+            img.load("../PwGUI/dependencies/icons/genericFile.png");
+        }
+
+        QIcon icon(img);
+        //here
+        QListWidgetItem* item = new QListWidgetItem(icon,qi.filePath());
+
+        if (qi.fileName() != "." && qi.fileName() != "..") {
+            ui->listWidget->addItem(item);
+        }
+
+
+
+
+    }
+
+}
+
+//funzione iniziale
 
 void MainWindow::displayDirectory(const QString& newText)
 {
@@ -87,18 +247,24 @@ void MainWindow::displayDirectory(const QString& newText)
 
 
 
+//open wiki
 void MainWindow::on_actionWiki_triggered()
 {
     QDesktopServices::openUrl(QUrl("https://github.com/LeonardoCasarotto/PwTpsit/wiki"));
 }
 
 
+//searchbyname
 void MainWindow::on_actionper_nome_triggered()
 {
     QString fileName;
     bool includeSubfolders;
 
-    bool ok = SearchInputDialog::getCheckboxValue(nullptr, 0, fileName, includeSubfolders);
+    SearchInputDialog::getCheckboxValue(nullptr, 0, fileName, includeSubfolders);
+
+
+    QMessageBox test;
+    QVector<QString> result;
 
     if(fileName==""||fileName==" ")
     {
@@ -106,53 +272,44 @@ void MainWindow::on_actionper_nome_triggered()
     }
     else if(!includeSubfolders)
     {
-        simpleSearchByName(current,fileName)
+       result = simpleSearchByName(current,fileName);
+
     }
-
-
-}
-
-//search methods
-
-//search by name
-
-QString dfsFileSearchByName(const QDir& dir, const QString& filename)
-{
-
-
-    // Controlla se il nome del file corrente corrisponde al nome cercato
-    QStringList files = dir.entryList(QStringList() << "*", QDir::Files);
-    foreach (const QString& file, files) {
-        if (file == filename) {
-            return dir.absoluteFilePath(file);
-        }
-    }
-
-    // Esegui la ricerca DFS nelle sottodirectory
-    QStringList subdirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    foreach (const QString& subdirectory, subdirectories) {
-        QString newPath = dir.absoluteFilePath(subdirectory);
-        QString filePath = dfsFileSearchByName(newPath, filename);
-        if (!filePath.isEmpty()) {
-            return filePath;
-        }
-    }
-
-    // Il file non è stato trovato
-    return QString();
-}
-
-QString simpleSearchByName(const QDir& dir, const QString& filename)
-{
-
-    foreach (QFileInfo v, dir.entryInfoList())
+    else if(includeSubfolders)
     {
-        if(v.fileName() == filename)
-        {
-            return v.absoluteFilePath();
-        }
+
+       result = dfsFileSearchByName(current, fileName);
 
     }
-    return nullptr;
+        updateDirectory(result);
+
+    return;
+
 
 }
+
+
+
+
+
+//search by extension
+void MainWindow::on_actionPer_Estensione_triggered()
+{
+    QString fileExtension;
+    bool includeSubfolders;
+    QVector<QString> result;
+
+    SearchInputDialog::getCheckboxValue(nullptr, 1, fileExtension, includeSubfolders);
+
+    if(fileExtension=="" || fileExtension.contains(" ")){
+       return;
+    }
+    else if(!includeSubfolders) result = simpleSearchByExtension(current,fileExtension);
+    else if(includeSubfolders) result = dfsFileSearchByExtension(current,fileExtension);
+
+    updateDirectory(result);
+
+    return;
+
+}
+

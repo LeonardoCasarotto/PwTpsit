@@ -73,7 +73,7 @@
   </action>
   <action name="actionper_nome">
    <property name="text">
-    <string>Per nome</string>
+    <string>Per Nome</string>
    </property>
   </action>
   <action name="actionPer_Estensione">
@@ -83,7 +83,7 @@
   </action>
   <action name="actionPer_contenuto">
    <property name="text">
-    <string>Per contenuto</string>
+    <string>Per Contenuto</string>
    </property>
   </action>
  </widget>

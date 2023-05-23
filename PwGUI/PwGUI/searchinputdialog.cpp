@@ -18,7 +18,7 @@ bool SearchInputDialog::getCheckboxValue(QWidget* parent, int src, QString& text
         dialog.setWindowTitle("Cerca file per nome");
         break;
     case 1: //extension
-        dialog.setLabelText("\n\nInserire l'estensione del file:");
+        dialog.setLabelText("\n\nInserire l'estensione del file, senza il punto:");
         dialog.setWindowTitle("Cerca file per estensione");
         break;
     case 2: //text in files
