@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
@@ -51,6 +52,10 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(868, 639);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../../Scaricati/appIcon.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
+        MainWindow->setIconSize(QSize(128, 128));
         actionWiki = new QAction(MainWindow);
         actionWiki->setObjectName("actionWiki");
         actionper_nome = new QAction(MainWindow);
@@ -124,7 +129,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "FileOrganizer ", nullptr));
         actionWiki->setText(QCoreApplication::translate("MainWindow", "Wiki", nullptr));
         actionper_nome->setText(QCoreApplication::translate("MainWindow", "Per Nome", nullptr));
         actionPer_Estensione->setText(QCoreApplication::translate("MainWindow", "Per Estensione", nullptr));

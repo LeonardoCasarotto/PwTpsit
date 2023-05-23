@@ -387,6 +387,7 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/include/./ui_mainwindow.h \
  /usr/include/qt6/QtCore/QVariant /usr/include/qt6/QtCore/qvariant.h \
  /usr/include/qt6/QtGui/QAction /usr/include/qt6/QtGui/qaction.h \
+ /usr/include/qt6/QtGui/QIcon /usr/include/qt6/QtGui/qicon.h \
  /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtCore/qcoreapplication.h \

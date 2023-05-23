@@ -1955,6 +1955,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/qt6/QtCore/qvariant.h \
   /usr/include/qt6/QtGui/QAction \
   /usr/include/qt6/QtGui/qaction.h \
+  /usr/include/qt6/QtGui/QIcon \
+  /usr/include/qt6/QtGui/qicon.h \
   /usr/include/qt6/QtWidgets/QApplication \
   /usr/include/qt6/QtWidgets/qapplication.h \
   /usr/include/qt6/QtCore/qcoreapplication.h \
@@ -2064,6 +2066,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 /usr/include/c++/13.1.1/bits/quoted_string.h:
 
 /usr/include/c++/13.1.1/x86_64-pc-linux-gnu/bits/time_members.h:
+
+/usr/include/qt6/QtGui/QIcon:
 
 /usr/include/qt6/QtGui/QDesktopServices:
 

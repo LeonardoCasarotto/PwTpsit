@@ -1959,6 +1959,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o
  /usr/include/qt6/QtCore/qvariant.h
  /usr/include/qt6/QtGui/QAction
  /usr/include/qt6/QtGui/qaction.h
+ /usr/include/qt6/QtGui/QIcon
+ /usr/include/qt6/QtGui/qicon.h
  /usr/include/qt6/QtWidgets/QApplication
  /usr/include/qt6/QtWidgets/qapplication.h
  /usr/include/qt6/QtCore/qcoreapplication.h
