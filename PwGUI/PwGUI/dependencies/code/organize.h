@@ -80,6 +80,7 @@ void organizeFilesByOwner(const QDir& baseDir)
     foreach (QFileInfo fileInfo, baseDir.entryInfoList(QDir::Files)) {
 
         if (!owners.contains(fileInfo.owner())) {
+
             owners.append(fileInfo.owner());
             baseDir.mkdir(fileInfo.owner());
         }
