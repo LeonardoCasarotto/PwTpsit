@@ -13,8 +13,12 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 {
     ui->setupUi(this);
 
+    connect(ui->listWidget, SIGNAL(itemClicked(QListWidgetItem*)),
+            this, SLOT(onListWidgetItemClicked(QListWidgetItem*)));
+
 
     on_actionScegli_nuova_directory_triggered();
+
 
 }
 
@@ -24,6 +28,15 @@ MainWindow::~MainWindow()
 }
 
 
+
+void MainWindow::onListWidgetItemClicked(QListWidgetItem* item)
+{
+
+
+
+    displayDirectory(item->data(Qt::UserRole).toString());
+
+}
 
 //aggiorna con i risultati ottenuti
 void MainWindow::updateDirectory(const QVector<QString>&files)
@@ -124,9 +137,11 @@ void MainWindow::displayDirectory(const QString& newText)
         QIcon icon(img);
 
         QListWidgetItem* item = new QListWidgetItem(icon,v.fileName());
+        item->setData(Qt::UserRole,v.absoluteFilePath());
 
         if (v.fileName() != "." && v.fileName() != "..") {
             ui->listWidget->addItem(item);
+
         }
     }
 

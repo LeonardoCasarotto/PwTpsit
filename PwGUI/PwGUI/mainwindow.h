@@ -26,7 +26,9 @@ public:
     void updateDirectory(const QVector<QString>&files);
 
 
+
 private slots:
+    void onListWidgetItemClicked(QListWidgetItem* item);
     void on_actionWiki_triggered();
 
     void on_actionper_nome_triggered();
