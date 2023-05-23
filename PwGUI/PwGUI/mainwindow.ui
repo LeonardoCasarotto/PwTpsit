@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>870</width>
-    <height>619</height>
+    <width>868</width>
+    <height>639</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,10 +18,23 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>20</y>
       <width>861</width>
       <height>571</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>331</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -30,7 +43,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>870</width>
+     <width>868</width>
      <height>22</height>
     </rect>
    </property>
@@ -41,7 +54,7 @@
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
-     <string>Edit</string>
+     <string>Strumenti</string>
     </property>
     <widget class="QMenu" name="menuCerca">
      <property name="title">
@@ -54,6 +67,7 @@
      <addaction name="actionPer_contenuto"/>
     </widget>
     <addaction name="menuCerca"/>
+    <addaction name="actionScegli_nuova_directory"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -84,6 +98,11 @@
   <action name="actionPer_contenuto">
    <property name="text">
     <string>Per Contenuto</string>
+   </property>
+  </action>
+  <action name="actionScegli_nuova_directory">
+   <property name="text">
+    <string>Scegli nuova directory</string>
    </property>
   </action>
  </widget>

@@ -1533,6 +1533,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/qt6/QtGui/qguiapplication.h \
   /usr/include/qt6/QtGui/qinputmethod.h \
   /usr/include/qt6/QtGui/qguiapplication_platform.h \
+  /usr/include/qt6/QtWidgets/QLineEdit \
+  /usr/include/qt6/QtWidgets/qlineedit.h \
   /usr/include/qt6/QtWidgets/QListWidget \
   /usr/include/qt6/QtWidgets/QMainWindow \
   /usr/include/qt6/QtWidgets/QMenu \
@@ -1983,6 +1985,8 @@ CMakeFiles/PwGUI.dir/searchinputdialog.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI
 /usr/include/qt6/QtWidgets/qmenubar.h:
 
 /usr/include/qt6/QtWidgets/qmenu.h:
+
+/usr/include/qt6/QtWidgets/QLineEdit:
 
 /usr/include/qt6/QtCore/QVariant:
 

@@ -101,6 +101,64 @@ QVector<QString> simpleSearchByExtension(const QDir& dir, const QString& extensi
 }
 //fine funzioni punto due
 
+//inizio funzioni punto tre
+QVector<QString> dfsFileSearchByContent(const QDir& dir, const QString& word)
+{
+    QVector<QString> toReturn;
+
+
+    QStringList files = dir.entryList(QStringList() << "*.txt", QDir::Files);  // Only search for .txt files
+
+    foreach (const QString& file, files) {
+        QString filePath = dir.filePath(file);
+        QFile inputFile(filePath);
+        if (inputFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            QTextStream in(&inputFile);
+            QString fileContents = in.readAll();
+            if (fileContents.contains(word)) {
+                toReturn.append(filePath);
+            }
+            inputFile.close();
+        }
+    }
+
+
+    QStringList subdirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    foreach (const QString& subdirectory, subdirectories) {
+        QDir newPath = dir;
+        newPath.cd(subdirectory);
+        QVector<QString> filePaths = dfsFileSearchByContent(newPath, word);
+        if (!filePaths.isEmpty()) {
+            toReturn += filePaths;
+        }
+    }
+
+
+    return toReturn;
+}
+
+
+QVector<QString> simpleSearchByContent(const QDir& dir, const QString& word){
+
+     QStringList files = dir.entryList(QStringList() << "*.txt", QDir::Files);  // Only search for .txt files
+    QVector<QString> toReturn;
+
+    foreach (const QString& file, files) {
+        QString filePath = dir.filePath(file);
+        QFile inputFile(filePath);
+        if (inputFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            QTextStream in(&inputFile);
+            QString fileContents = in.readAll();
+            if (fileContents.contains(word)) {
+                toReturn.append(filePath);
+            }
+            inputFile.close();
+        }
+    }
+
+    return toReturn;
+
+}
 
 
 
@@ -112,15 +170,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QString dir = QFileDialog::getExistingDirectory(nullptr,
-                                                    QObject::tr("Selezionare la cartella iniziale"),
-                                                    "/home",
-                                                    QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
-
-    current = dir;
-    displayDirectory(dir);
 
 
+    on_actionScegli_nuova_directory_triggered();
 
 
 
@@ -301,7 +353,7 @@ void MainWindow::on_actionPer_Estensione_triggered()
 
     SearchInputDialog::getCheckboxValue(nullptr, 1, fileExtension, includeSubfolders);
 
-    if(fileExtension=="" || fileExtension.contains(" ")){
+    if(fileExtension=="" || fileExtension.contains(" ")||fileExtension.contains(".")){
        return;
     }
     else if(!includeSubfolders) result = simpleSearchByExtension(current,fileExtension);
@@ -311,5 +363,42 @@ void MainWindow::on_actionPer_Estensione_triggered()
 
     return;
 
+}
+
+
+
+
+void MainWindow::on_actionScegli_nuova_directory_triggered()
+{
+    ui->listWidget->clear();
+    QString dir = QFileDialog::getExistingDirectory(nullptr,
+                                                    QObject::tr("Selezionare la cartella iniziale"),
+                                                    "/home",
+                                                    QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+
+    current = dir;
+    ui->lineEdit->setText(current.absolutePath());
+    displayDirectory(dir);
+
+}
+
+
+void MainWindow::on_actionPer_contenuto_triggered()
+{
+    QString word;
+    bool includeSubfolders;
+    QVector<QString> result;
+
+    SearchInputDialog::getCheckboxValue(nullptr, 2, word, includeSubfolders);
+
+    if(word=="" || word == " "){
+       return;
+    }
+    else if(!includeSubfolders) result = simpleSearchByContent(current,word);
+    else if(includeSubfolders) result = dfsFileSearchByContent(current,word);
+
+    updateDirectory(result);
+
+    return;
 }
 

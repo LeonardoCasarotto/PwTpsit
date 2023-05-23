@@ -33,6 +33,10 @@ private slots:
 
     void on_actionPer_Estensione_triggered();
 
+    void on_actionScegli_nuova_directory_triggered();
+
+    void on_actionPer_contenuto_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
