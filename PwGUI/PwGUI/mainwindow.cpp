@@ -97,6 +97,7 @@ void MainWindow::displayDirectory(const QString& newText)
 
     //read directory
     ui->listWidget->clear();
+    current =dir;
     foreach (QFileInfo v, dir.entryInfoList()) {
 
 
@@ -135,6 +136,7 @@ void MainWindow::displayDirectory(const QString& newText)
 
 
         QIcon icon(img);
+
 
         QListWidgetItem* item = new QListWidgetItem(icon,v.fileName());
         item->setData(Qt::UserRole,v.absoluteFilePath());
@@ -287,5 +289,11 @@ void MainWindow::on_actionDimensione_triggered()
 void MainWindow::on_actionRicarica_triggered()
 {
     displayDirectory(current.absolutePath());
+}
+
+
+void MainWindow::on_actionApri_in_Esplora_File_triggered()
+{
+    QDesktopServices::openUrl( QUrl::fromLocalFile(current.absolutePath()));
 }
 

@@ -36,6 +36,7 @@ public:
     QAction *actionProprietario;
     QAction *actionDimensione;
     QAction *actionRicarica;
+    QAction *actionApri_in_Esplora_File;
     QWidget *centralwidget;
     QListWidget *listWidget;
     QLineEdit *lineEdit;
@@ -76,6 +77,8 @@ public:
         actionDimensione->setObjectName("actionDimensione");
         actionRicarica = new QAction(MainWindow);
         actionRicarica->setObjectName("actionRicarica");
+        actionApri_in_Esplora_File = new QAction(MainWindow);
+        actionApri_in_Esplora_File->setObjectName("actionApri_in_Esplora_File");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         listWidget = new QListWidget(centralwidget);
@@ -88,7 +91,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 868, 22));
+        menubar->setGeometry(QRect(0, 0, 868, 30));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName("menuFile");
         menuEdit = new QMenu(menubar);
@@ -107,6 +110,7 @@ public:
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuEdit->menuAction());
         menubar->addAction(menuHelp->menuAction());
+        menuFile->addAction(actionApri_in_Esplora_File);
         menuEdit->addAction(menuCerca->menuAction());
         menuEdit->addAction(menuOrganizza->menuAction());
         menuEdit->addAction(actionScegli_nuova_directory);
@@ -140,6 +144,7 @@ public:
         actionProprietario->setText(QCoreApplication::translate("MainWindow", "Proprietario", nullptr));
         actionDimensione->setText(QCoreApplication::translate("MainWindow", "Dimensione", nullptr));
         actionRicarica->setText(QCoreApplication::translate("MainWindow", "Ricarica Cartelle", nullptr));
+        actionApri_in_Esplora_File->setText(QCoreApplication::translate("MainWindow", "Apri in Esplora File", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Strumenti", nullptr));
         menuCerca->setTitle(QCoreApplication::translate("MainWindow", "Cerca", nullptr));

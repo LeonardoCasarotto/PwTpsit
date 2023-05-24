@@ -49,6 +49,8 @@ private slots:
 
     void on_actionRicarica_triggered();
 
+    void on_actionApri_in_Esplora_File_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

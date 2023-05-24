@@ -54,13 +54,14 @@
      <x>0</x>
      <y>0</y>
      <width>868</width>
-     <height>22</height>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionApri_in_Esplora_File"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -149,6 +150,11 @@
   <action name="actionRicarica">
    <property name="text">
     <string>Ricarica Cartelle</string>
+   </property>
+  </action>
+  <action name="actionApri_in_Esplora_File">
+   <property name="text">
+    <string>Apri in Esplora File</string>
    </property>
   </action>
  </widget>
