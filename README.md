@@ -2,7 +2,7 @@
 <p>Il nostro progetto consiste nel <b>ricreare una utility di ricerca e di riorganizzazione dei file</b> tramite l'utilizzo della programmazione concorrente.
   Abbiamo sviluppato il nostro lavoro tramite il <b>framework QT</b>, che ci ha permesso di dare un'aspetto al progetto tramite una GUI per il linguaggio C++.</p> 
 <h2>Ambiente di sviluppo</h2>
-<p>L'ambiente di sviluppo del nostro progetto è un <b>ambiente unix</b>, nel nostro caso in particolare basato su Arch Linux, grazie al quale abbiamo potuto usufruire degli standard POSIX.</p>
+<p>L'ambiente di sviluppo del nostro progetto è un <b>ambiente unix</b>, nel nostro caso in particolare basato su Arch Linux, grazie al quale abbiamo potuto usufruire degli standard <b>POSIX</b>.</p>
   
 <p>Le funzioni principali del nostro progetto sono:</p>
   
