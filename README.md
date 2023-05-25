@@ -1,19 +1,22 @@
 # Tpsit ProjectWork, file manager
-## Come configurare l'ambiente di sviluppo
-<p>L'ambiente di sviluppo va configurato su sistema operativo basato su linux (io attualmente uso ubuntu, ma anchen ArchLinux non é male). Se non avete linux, create una macchina virtuale per poterlo utilizzare.<br>
+<p>Il nostro progetto consiste nel ricreare una utility di ricerca e di riorganizzazione dei file tramite l'utilizzo della programmazione concorrente.
+Abbiamo sviluppato il nostro lavoro tramite il framework QT, che ci ha permesso di dare un'aspetto al progetto tramite una GUI per il linguaggio C++.</p> 
+<h2>Ambiente di sviluppo</h2>
+<p>L'ambiente di sviluppo del nostro progetto è un ambiente unix, nel nostro caso in particolare basato su Arch LInux, grazie al quale abbiamo potuto usufruire degli standard POSIX.<br>
   
 
 <ol>
-  <li> Installare Qt  e le dipendenze con i comandi</li>
+  <li> Le funzioni principali del nostro progetto sono:</li>
   
-```console
-  sudo apt-get install build-essential
-
-  sudo apt-get install qtcreator
-
-  sudo apt-get install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
-  
-  sudo apt install cmake
+  - Selezionare su quale cartella è possibile eseguire il progetto;
+  - Ricerca di un determinato/a file/cartella tramite il nome;
+  - Ricerca, all'interno di tutti i file .txt, di una determinata parola;
+  - Creazione di cartelle ordinate che contengo a loro volta file ordinati alfabeticamente;
+  - Creazione di cartelle che contengano file dello stesso tipo;
+  - Creazione di cartelle che dividano i file in base alla dimensione dello stesso;
+  - Ordinamento in ordine alfabetico e rinomina dei file tramite l'utilizzo di un codice numerico;
+  - Ordinamento in base alla creazione, dal meno recente al più recente, dei file tramite l'utilizzo di un codice     numerico;
+  - Creazione di cartelle che dividono i file in base al proprietario;
   
   sudo apt install g++
 ```
