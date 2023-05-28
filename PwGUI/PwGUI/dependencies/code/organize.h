@@ -132,5 +132,9 @@ void organizeFilesBySize(const QDir& baseDir)
     }
 }
 
+void renameByAlphabeth(const QDir& baseDir)
+{
+
+}
 
 #endif // ORGANIZE_H

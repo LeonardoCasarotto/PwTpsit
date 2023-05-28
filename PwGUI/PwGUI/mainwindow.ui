@@ -54,7 +54,7 @@
      <x>0</x>
      <y>0</y>
      <width>868</width>
-     <height>30</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -85,6 +85,8 @@
      <addaction name="actionEstensione"/>
      <addaction name="actionProprietario"/>
      <addaction name="actionDimensione"/>
+     <addaction name="actionRinomina_in_ordine_alfabetico"/>
+     <addaction name="actionRinomina_in_ordine_di_modifica"/>
     </widget>
     <addaction name="menuCerca"/>
     <addaction name="menuOrganizza"/>
@@ -155,6 +157,16 @@
   <action name="actionApri_in_Esplora_File">
    <property name="text">
     <string>Apri in Esplora File</string>
+   </property>
+  </action>
+  <action name="actionRinomina_in_ordine_alfabetico">
+   <property name="text">
+    <string>Rinomina in ordine alfabetico</string>
+   </property>
+  </action>
+  <action name="actionRinomina_in_ordine_di_modifica">
+   <property name="text">
+    <string>Rinomina in ordine di modifica</string>
    </property>
   </action>
  </widget>

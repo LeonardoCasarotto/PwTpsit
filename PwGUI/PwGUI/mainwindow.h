@@ -10,6 +10,11 @@
 #include <QDesktopServices>
 #include "./dependencies/code/searchinputdialog.h"
 #include <QMessageBox>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/wait.h>
+#include <QThread>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -50,6 +55,8 @@ private slots:
     void on_actionRicarica_triggered();
 
     void on_actionApri_in_Esplora_File_triggered();
+
+    void on_actionRinomina_in_ordine_alfabetico_triggered();
 
 private:
     Ui::MainWindow *ui;

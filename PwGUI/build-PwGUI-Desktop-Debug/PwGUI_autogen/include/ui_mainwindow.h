@@ -37,6 +37,8 @@ public:
     QAction *actionDimensione;
     QAction *actionRicarica;
     QAction *actionApri_in_Esplora_File;
+    QAction *actionRinomina_in_ordine_alfabetico;
+    QAction *actionRinomina_in_ordine_di_modifica;
     QWidget *centralwidget;
     QListWidget *listWidget;
     QLineEdit *lineEdit;
@@ -79,6 +81,10 @@ public:
         actionRicarica->setObjectName("actionRicarica");
         actionApri_in_Esplora_File = new QAction(MainWindow);
         actionApri_in_Esplora_File->setObjectName("actionApri_in_Esplora_File");
+        actionRinomina_in_ordine_alfabetico = new QAction(MainWindow);
+        actionRinomina_in_ordine_alfabetico->setObjectName("actionRinomina_in_ordine_alfabetico");
+        actionRinomina_in_ordine_di_modifica = new QAction(MainWindow);
+        actionRinomina_in_ordine_di_modifica->setObjectName("actionRinomina_in_ordine_di_modifica");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         listWidget = new QListWidget(centralwidget);
@@ -91,7 +97,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 868, 30));
+        menubar->setGeometry(QRect(0, 0, 868, 22));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName("menuFile");
         menuEdit = new QMenu(menubar);
@@ -124,6 +130,8 @@ public:
         menuOrganizza->addAction(actionEstensione);
         menuOrganizza->addAction(actionProprietario);
         menuOrganizza->addAction(actionDimensione);
+        menuOrganizza->addAction(actionRinomina_in_ordine_alfabetico);
+        menuOrganizza->addAction(actionRinomina_in_ordine_di_modifica);
         menuHelp->addAction(actionWiki);
 
         retranslateUi(MainWindow);
@@ -145,6 +153,8 @@ public:
         actionDimensione->setText(QCoreApplication::translate("MainWindow", "Dimensione", nullptr));
         actionRicarica->setText(QCoreApplication::translate("MainWindow", "Ricarica Cartelle", nullptr));
         actionApri_in_Esplora_File->setText(QCoreApplication::translate("MainWindow", "Apri in Esplora File", nullptr));
+        actionRinomina_in_ordine_alfabetico->setText(QCoreApplication::translate("MainWindow", "Rinomina in ordine alfabetico", nullptr));
+        actionRinomina_in_ordine_di_modifica->setText(QCoreApplication::translate("MainWindow", "Rinomina in ordine di modifica", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Strumenti", nullptr));
         menuCerca->setTitle(QCoreApplication::translate("MainWindow", "Cerca", nullptr));

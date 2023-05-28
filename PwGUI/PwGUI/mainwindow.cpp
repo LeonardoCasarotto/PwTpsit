@@ -39,6 +39,8 @@ void MainWindow::onListWidgetItemClicked(QListWidgetItem* item)
 }
 
 //aggiorna con i risultati ottenuti
+
+
 void MainWindow::updateDirectory(const QVector<QString>&files)
 {
     ui->listWidget->clear();
@@ -88,6 +90,8 @@ void MainWindow::updateDirectory(const QVector<QString>&files)
     }
 
 }
+
+
 
 //funzione iniziale
 
@@ -155,7 +159,9 @@ void MainWindow::displayDirectory(const QString& newText)
 //open wiki
 void MainWindow::on_actionWiki_triggered()
 {
-    QDesktopServices::openUrl(QUrl("https://github.com/LeonardoCasarotto/PwTpsit/wiki"));
+
+        QDesktopServices::openUrl(QUrl("https://github.com/LeonardoCasarotto/PwTpsit/wiki"));
+
 }
 
 
@@ -223,6 +229,8 @@ void MainWindow::on_actionPer_Estensione_triggered()
 
 void MainWindow::on_actionScegli_nuova_directory_triggered()
 {
+
+
     ui->listWidget->clear();
     QString dir = QFileDialog::getExistingDirectory(nullptr,
                                                     QObject::tr("Selezionare la cartella iniziale"),
@@ -232,6 +240,7 @@ void MainWindow::on_actionScegli_nuova_directory_triggered()
     current = dir;
     ui->lineEdit->setText(current.absolutePath());
     displayDirectory(dir);
+
 
 }
 
@@ -258,6 +267,7 @@ void MainWindow::on_actionPer_contenuto_triggered()
 
 void MainWindow::on_actionOrdine_Alfabetico_triggered()
 {
+
     organizeFilesByAlphabet(current);
     displayDirectory(current.absolutePath());
 }
@@ -265,6 +275,7 @@ void MainWindow::on_actionOrdine_Alfabetico_triggered()
 
 void MainWindow::on_actionEstensione_triggered()
 {
+
     organizeFilesByType(current);
     displayDirectory(current.absolutePath());
 }
@@ -288,12 +299,23 @@ void MainWindow::on_actionDimensione_triggered()
 
 void MainWindow::on_actionRicarica_triggered()
 {
-    displayDirectory(current.absolutePath());
+    QThread thread;
+    QObject::connect(&thread,&QThread::started,[&](){
+       displayDirectory(current.absolutePath());
+    });
+    thread.start();
 }
 
 
 void MainWindow::on_actionApri_in_Esplora_File_triggered()
 {
     QDesktopServices::openUrl( QUrl::fromLocalFile(current.absolutePath()));
+}
+
+
+void MainWindow::on_actionRinomina_in_ordine_alfabetico_triggered()
+{
+    renameByAlphabeth(current);
+    displayDirectory(current.absolutePath());
 }
 
