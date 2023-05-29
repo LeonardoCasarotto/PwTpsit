@@ -13,6 +13,11 @@
 
 //organize by alphabeth order
 
+void err(){
+    QMessageBox err;
+    err.setText("trasferimento non riuscito");
+    err.exec();
+}
 void organizeFilesByAlphabet(const QDir& baseDir)
 {
 
@@ -37,9 +42,7 @@ void organizeFilesByAlphabet(const QDir& baseDir)
         QString destinationFolder = baseDir.filePath(letterFolderName);
 
         if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
-            QMessageBox err;
-            err.setText("trasferimento non riuscito");
-            err.exec();
+            err();
         }
     }
 }
@@ -65,9 +68,7 @@ void organizeFilesByType(const QDir& baseDir)
 
         if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
 
-            QMessageBox err;
-            err.setText("trasferimento non riuscito");
-            err.exec();
+            err();
         }
     }
 }
@@ -91,9 +92,7 @@ void organizeFilesByOwner(const QDir& baseDir)
 
         if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
 
-            QMessageBox err;
-            err.setText("trasferimento non riuscito");
-            err.exec();
+            err();
         }
     }
 
@@ -132,9 +131,52 @@ void organizeFilesBySize(const QDir& baseDir)
     }
 }
 
-void renameByAlphabeth(const QDir& baseDir)
+
+
+void renameFilesByAlphabeth( QDir& baseDir)
 {
 
+
+    QStringList fileNames = baseDir.entryList(QDir::Files, QDir::Name);
+    int numero=001;
+    foreach (const QString& fileName, fileNames)
+    {
+        QString newName = QString("%1_%2").arg(numero, 3, 10, QLatin1Char('0')).arg(fileName);
+        QString newPath = baseDir.absoluteFilePath(newName);
+
+        if (!baseDir.rename(fileName, newPath)) {
+
+            err();
+        }
+        else{
+             numero++;
+        }
+
+    }
 }
+
+void renameFilesByLastModified( QDir& baseDir)
+{
+
+
+    QStringList fileNames = baseDir.entryList(QDir::Files, QDir::Time);
+    int numero=001;
+    foreach (const QString& fileName, fileNames)
+    {
+        QString newName = QString("%1_%2").arg(numero, 3, 10, QLatin1Char('0')).arg(fileName);
+        QString newPath = baseDir.absoluteFilePath(newName);
+
+        if (!baseDir.rename(fileName, newPath)) {
+
+             err();
+        }
+        else{
+             numero++;
+        }
+
+    }
+}
+
+
 
 #endif // ORGANIZE_H

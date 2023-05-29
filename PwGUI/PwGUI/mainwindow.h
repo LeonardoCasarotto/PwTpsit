@@ -58,6 +58,8 @@ private slots:
 
     void on_actionRinomina_in_ordine_alfabetico_triggered();
 
+    void on_actionRinomina_in_ordine_di_modifica_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -315,7 +315,14 @@ void MainWindow::on_actionApri_in_Esplora_File_triggered()
 
 void MainWindow::on_actionRinomina_in_ordine_alfabetico_triggered()
 {
-    renameByAlphabeth(current);
+    renameFilesByAlphabeth(current);
+    displayDirectory(current.absolutePath());
+}
+
+
+void MainWindow::on_actionRinomina_in_ordine_di_modifica_triggered()
+{
+    renameFilesByLastModified(current);
     displayDirectory(current.absolutePath());
 }
 
