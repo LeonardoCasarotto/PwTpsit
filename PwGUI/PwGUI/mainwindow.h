@@ -60,6 +60,10 @@ private slots:
 
     void on_actionRinomina_in_ordine_di_modifica_triggered();
 
+    void on_actionCartella_precedente_triggered();
+
+
+
 private:
     Ui::MainWindow *ui;
 };

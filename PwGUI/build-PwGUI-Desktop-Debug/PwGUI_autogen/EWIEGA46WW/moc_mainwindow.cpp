@@ -56,11 +56,12 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "on_actionRicarica_triggered",
     "on_actionApri_in_Esplora_File_triggered",
     "on_actionRinomina_in_ordine_alfabetico_triggered",
-    "on_actionRinomina_in_ordine_di_modifica_triggered"
+    "on_actionRinomina_in_ordine_di_modifica_triggered",
+    "on_actionCartella_precedente_triggered"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[36];
+    uint offsetsAndSizes[38];
     char stringdata0[11];
     char stringdata1[24];
     char stringdata2[1];
@@ -79,6 +80,7 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata15[40];
     char stringdata16[49];
     char stringdata17[50];
+    char stringdata18[39];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -101,7 +103,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(348, 27),  // "on_actionRicarica_triggered"
         QT_MOC_LITERAL(376, 39),  // "on_actionApri_in_Esplora_File..."
         QT_MOC_LITERAL(416, 48),  // "on_actionRinomina_in_ordine_a..."
-        QT_MOC_LITERAL(465, 49)   // "on_actionRinomina_in_ordine_d..."
+        QT_MOC_LITERAL(465, 49),  // "on_actionRinomina_in_ordine_d..."
+        QT_MOC_LITERAL(515, 38)   // "on_actionCartella_precedente_..."
     },
     "MainWindow",
     "onListWidgetItemClicked",
@@ -120,7 +123,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "on_actionRicarica_triggered",
     "on_actionApri_in_Esplora_File_triggered",
     "on_actionRinomina_in_ordine_alfabetico_triggered",
-    "on_actionRinomina_in_ordine_di_modifica_triggered"
+    "on_actionRinomina_in_ordine_di_modifica_triggered",
+    "on_actionCartella_precedente_triggered"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -132,7 +136,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -140,23 +144,25 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   98,    2, 0x08,    1 /* Private */,
-       5,    0,  101,    2, 0x08,    3 /* Private */,
-       6,    0,  102,    2, 0x08,    4 /* Private */,
-       7,    0,  103,    2, 0x08,    5 /* Private */,
-       8,    0,  104,    2, 0x08,    6 /* Private */,
-       9,    0,  105,    2, 0x08,    7 /* Private */,
-      10,    0,  106,    2, 0x08,    8 /* Private */,
-      11,    0,  107,    2, 0x08,    9 /* Private */,
-      12,    0,  108,    2, 0x08,   10 /* Private */,
-      13,    0,  109,    2, 0x08,   11 /* Private */,
-      14,    0,  110,    2, 0x08,   12 /* Private */,
-      15,    0,  111,    2, 0x08,   13 /* Private */,
-      16,    0,  112,    2, 0x08,   14 /* Private */,
-      17,    0,  113,    2, 0x08,   15 /* Private */,
+       1,    1,  104,    2, 0x08,    1 /* Private */,
+       5,    0,  107,    2, 0x08,    3 /* Private */,
+       6,    0,  108,    2, 0x08,    4 /* Private */,
+       7,    0,  109,    2, 0x08,    5 /* Private */,
+       8,    0,  110,    2, 0x08,    6 /* Private */,
+       9,    0,  111,    2, 0x08,    7 /* Private */,
+      10,    0,  112,    2, 0x08,    8 /* Private */,
+      11,    0,  113,    2, 0x08,    9 /* Private */,
+      12,    0,  114,    2, 0x08,   10 /* Private */,
+      13,    0,  115,    2, 0x08,   11 /* Private */,
+      14,    0,  116,    2, 0x08,   12 /* Private */,
+      15,    0,  117,    2, 0x08,   13 /* Private */,
+      16,    0,  118,    2, 0x08,   14 /* Private */,
+      17,    0,  119,    2, 0x08,   15 /* Private */,
+      18,    0,  120,    2, 0x08,   16 /* Private */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -211,6 +217,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_actionRinomina_in_ordine_alfabetico_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionRinomina_in_ordine_di_modifica_triggered'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_actionCartella_precedente_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -236,6 +244,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 11: _t->on_actionApri_in_Esplora_File_triggered(); break;
         case 12: _t->on_actionRinomina_in_ordine_alfabetico_triggered(); break;
         case 13: _t->on_actionRinomina_in_ordine_di_modifica_triggered(); break;
+        case 14: _t->on_actionCartella_precedente_triggered(); break;
         default: ;
         }
     }
@@ -260,13 +269,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 15)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 14;
+        _id -= 15;
     }
     return _id;
 }

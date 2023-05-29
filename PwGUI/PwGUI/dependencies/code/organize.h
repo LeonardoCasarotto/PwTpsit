@@ -5,6 +5,7 @@
 #include <QPixmap>
 #include <QListWidgetItem>
 #include <QDesktopServices>
+#include "qthread.h"
 #include "searchinputdialog.h"
 #include <QMessageBox>
 #ifndef ORGANIZE_H
@@ -18,23 +19,38 @@ void err(){
     err.setText("trasferimento non riuscito");
     err.exec();
 }
-void organizeFilesByAlphabet(const QDir& baseDir)
+
+void createFolders(const QDir& baseDir, char startLetter, char endLetter)
 {
-
-    if (!baseDir.exists()) {
-
-        return;
-    }
-
-
-    QStringList fileNames = baseDir.entryList(QDir::Files);
-
-
-    for (char letter = 'A'; letter <= 'Z'; ++letter) {
+    for (char letter = startLetter; letter <= endLetter; ++letter) {
         QString letterFolderName = QString(letter);
         baseDir.mkdir(letterFolderName);
     }
+}
 
+void organizeFilesByAlphabet(const QDir& baseDir)
+{
+    if (!baseDir.exists()) {
+        return;
+    }
+
+    QStringList fileNames = baseDir.entryList(QDir::Files);
+
+    QThread thread1;
+    QThread thread2;
+    thread1.start();
+    thread2.start();
+
+    QObject::connect(&thread1, &QThread::started, [&]() {
+        createFolders(baseDir, 'A', 'M');
+    });
+
+    QObject::connect(&thread2, &QThread::started, [&]() {
+        createFolders(baseDir, 'N', 'Z');
+    });
+
+    thread1.wait();
+    thread2.wait();
 
     foreach (const QString& fileName, fileNames) {
         QFileInfo fileInfo(baseDir.filePath(fileName));
@@ -42,7 +58,9 @@ void organizeFilesByAlphabet(const QDir& baseDir)
         QString destinationFolder = baseDir.filePath(letterFolderName);
 
         if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
-            err();
+            QMessageBox err;
+            err.setText("Trasferimento non riuscito");
+            err.exec();
         }
     }
 }

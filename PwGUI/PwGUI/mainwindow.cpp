@@ -298,12 +298,9 @@ void MainWindow::on_actionDimensione_triggered()
 
 
 void MainWindow::on_actionRicarica_triggered()
-{
-    QThread thread;
-    QObject::connect(&thread,&QThread::started,[&](){
+{ 
        displayDirectory(current.absolutePath());
-    });
-    thread.start();
+
 }
 
 
@@ -325,4 +322,15 @@ void MainWindow::on_actionRinomina_in_ordine_di_modifica_triggered()
     renameFilesByLastModified(current);
     displayDirectory(current.absolutePath());
 }
+
+
+void MainWindow::on_actionCartella_precedente_triggered()
+{
+    current.cd("..");
+    ui->lineEdit->setText(current.absolutePath());
+    displayDirectory(current.absolutePath());
+}
+
+
+
 

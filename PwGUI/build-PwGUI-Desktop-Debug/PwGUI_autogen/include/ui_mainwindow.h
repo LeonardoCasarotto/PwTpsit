@@ -39,6 +39,8 @@ public:
     QAction *actionApri_in_Esplora_File;
     QAction *actionRinomina_in_ordine_alfabetico;
     QAction *actionRinomina_in_ordine_di_modifica;
+    QAction *actionCartella_precedente;
+    QAction *actionTema_Scuro;
     QWidget *centralwidget;
     QListWidget *listWidget;
     QLineEdit *lineEdit;
@@ -47,6 +49,7 @@ public:
     QMenu *menuEdit;
     QMenu *menuCerca;
     QMenu *menuOrganizza;
+    QMenu *menuPercorso;
     QMenu *menuHelp;
     QStatusBar *statusbar;
 
@@ -85,6 +88,11 @@ public:
         actionRinomina_in_ordine_alfabetico->setObjectName("actionRinomina_in_ordine_alfabetico");
         actionRinomina_in_ordine_di_modifica = new QAction(MainWindow);
         actionRinomina_in_ordine_di_modifica->setObjectName("actionRinomina_in_ordine_di_modifica");
+        actionCartella_precedente = new QAction(MainWindow);
+        actionCartella_precedente->setObjectName("actionCartella_precedente");
+        actionTema_Scuro = new QAction(MainWindow);
+        actionTema_Scuro->setObjectName("actionTema_Scuro");
+        actionTema_Scuro->setCheckable(true);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         listWidget = new QListWidget(centralwidget);
@@ -106,6 +114,8 @@ public:
         menuCerca->setObjectName("menuCerca");
         menuOrganizza = new QMenu(menuEdit);
         menuOrganizza->setObjectName("menuOrganizza");
+        menuPercorso = new QMenu(menuEdit);
+        menuPercorso->setObjectName("menuPercorso");
         menuHelp = new QMenu(menubar);
         menuHelp->setObjectName("menuHelp");
         MainWindow->setMenuBar(menubar);
@@ -120,6 +130,7 @@ public:
         menuEdit->addAction(menuCerca->menuAction());
         menuEdit->addAction(menuOrganizza->menuAction());
         menuEdit->addAction(actionScegli_nuova_directory);
+        menuEdit->addAction(menuPercorso->menuAction());
         menuEdit->addAction(actionRicarica);
         menuCerca->addSeparator();
         menuCerca->addSeparator();
@@ -132,6 +143,7 @@ public:
         menuOrganizza->addAction(actionDimensione);
         menuOrganizza->addAction(actionRinomina_in_ordine_alfabetico);
         menuOrganizza->addAction(actionRinomina_in_ordine_di_modifica);
+        menuPercorso->addAction(actionCartella_precedente);
         menuHelp->addAction(actionWiki);
 
         retranslateUi(MainWindow);
@@ -151,14 +163,17 @@ public:
         actionEstensione->setText(QCoreApplication::translate("MainWindow", "Estensione", nullptr));
         actionProprietario->setText(QCoreApplication::translate("MainWindow", "Proprietario", nullptr));
         actionDimensione->setText(QCoreApplication::translate("MainWindow", "Dimensione", nullptr));
-        actionRicarica->setText(QCoreApplication::translate("MainWindow", "Ricarica Cartelle", nullptr));
+        actionRicarica->setText(QCoreApplication::translate("MainWindow", "Ricarica directory", nullptr));
         actionApri_in_Esplora_File->setText(QCoreApplication::translate("MainWindow", "Apri in Esplora File", nullptr));
         actionRinomina_in_ordine_alfabetico->setText(QCoreApplication::translate("MainWindow", "Rinomina in ordine alfabetico", nullptr));
         actionRinomina_in_ordine_di_modifica->setText(QCoreApplication::translate("MainWindow", "Rinomina in ordine di modifica", nullptr));
+        actionCartella_precedente->setText(QCoreApplication::translate("MainWindow", "Cartella precedente", nullptr));
+        actionTema_Scuro->setText(QCoreApplication::translate("MainWindow", "Tema Scuro", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Strumenti", nullptr));
         menuCerca->setTitle(QCoreApplication::translate("MainWindow", "Cerca", nullptr));
         menuOrganizza->setTitle(QCoreApplication::translate("MainWindow", "Organizza", nullptr));
+        menuPercorso->setTitle(QCoreApplication::translate("MainWindow", "Percorso...", nullptr));
         menuHelp->setTitle(QCoreApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi
 

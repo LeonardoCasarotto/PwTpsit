@@ -88,9 +88,16 @@
      <addaction name="actionRinomina_in_ordine_alfabetico"/>
      <addaction name="actionRinomina_in_ordine_di_modifica"/>
     </widget>
+    <widget class="QMenu" name="menuPercorso">
+     <property name="title">
+      <string>Percorso...</string>
+     </property>
+     <addaction name="actionCartella_precedente"/>
+    </widget>
     <addaction name="menuCerca"/>
     <addaction name="menuOrganizza"/>
     <addaction name="actionScegli_nuova_directory"/>
+    <addaction name="menuPercorso"/>
     <addaction name="actionRicarica"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
@@ -151,7 +158,7 @@
   </action>
   <action name="actionRicarica">
    <property name="text">
-    <string>Ricarica Cartelle</string>
+    <string>Ricarica directory</string>
    </property>
   </action>
   <action name="actionApri_in_Esplora_File">
@@ -167,6 +174,19 @@
   <action name="actionRinomina_in_ordine_di_modifica">
    <property name="text">
     <string>Rinomina in ordine di modifica</string>
+   </property>
+  </action>
+  <action name="actionCartella_precedente">
+   <property name="text">
+    <string>Cartella precedente</string>
+   </property>
+  </action>
+  <action name="actionTema_Scuro">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tema Scuro</string>
    </property>
   </action>
  </widget>

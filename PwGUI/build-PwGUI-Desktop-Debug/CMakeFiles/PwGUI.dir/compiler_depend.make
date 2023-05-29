@@ -2110,6 +2110,7 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/qt6/QtWidgets/QWidget \
   /usr/include/qt6/QtWidgets/qwidget.h \
   /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/organize.h \
+  /usr/include/qt6/QtCore/qthread.h \
   /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.h \
   /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/search.h
 
