@@ -5,7 +5,9 @@
 #include <QPixmap>
 #include <QListWidgetItem>
 #include <QDesktopServices>
-#include "qthread.h"
+#include <QThread>
+#include <QRunnable>
+#include <QThreadPool>
 #include "searchinputdialog.h"
 #include <QMessageBox>
 #ifndef ORGANIZE_H
@@ -20,11 +22,29 @@ void err(){
     err.exec();
 }
 
+
+
+
+class CreateFolderThread : public QThread {
+public:
+    CreateFolderThread(const QDir& baseDir, const QString& folderName)
+        : baseDir(baseDir), folderName(folderName) {}
+
+    void run() override {
+        baseDir.mkdir(folderName);
+    }
+
+private:
+    QDir baseDir;
+    QString folderName;
+};
+
 void createFolders(const QDir& baseDir, char startLetter, char endLetter)
 {
     for (char letter = startLetter; letter <= endLetter; ++letter) {
         QString letterFolderName = QString(letter);
-        baseDir.mkdir(letterFolderName);
+        QThread* thread = new CreateFolderThread(baseDir, letterFolderName);
+        thread->start();
     }
 }
 
@@ -36,21 +56,7 @@ void organizeFilesByAlphabet(const QDir& baseDir)
 
     QStringList fileNames = baseDir.entryList(QDir::Files);
 
-    QThread thread1;
-    QThread thread2;
-    thread1.start();
-    thread2.start();
-
-    QObject::connect(&thread1, &QThread::started, [&]() {
-        createFolders(baseDir, 'A', 'M');
-    });
-
-    QObject::connect(&thread2, &QThread::started, [&]() {
-        createFolders(baseDir, 'N', 'Z');
-    });
-
-    thread1.wait();
-    thread2.wait();
+    createFolders(baseDir, 'A', 'Z');
 
     foreach (const QString& fileName, fileNames) {
         QFileInfo fileInfo(baseDir.filePath(fileName));
@@ -58,12 +64,24 @@ void organizeFilesByAlphabet(const QDir& baseDir)
         QString destinationFolder = baseDir.filePath(letterFolderName);
 
         if (!QFile::rename(fileInfo.absoluteFilePath(), destinationFolder + "/" + fileInfo.fileName())) {
-            QMessageBox err;
-            err.setText("Trasferimento non riuscito");
-            err.exec();
+            err();
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //organize files by type (extension)

@@ -432,6 +432,9 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtWidgets/qstatusbar.h \
  /usr/include/qt6/QtWidgets/QWidget /usr/include/qt6/QtWidgets/qwidget.h \
  /home/leonardo/PwTpsit/PwGUI/PwGUI/./dependencies/code/organize.h \
- /usr/include/qt6/QtCore/qthread.h \
+ /usr/include/qt6/QtCore/QRunnable /usr/include/qt6/QtCore/qrunnable.h \
+ /usr/include/qt6/QtCore/QThreadPool \
+ /usr/include/qt6/QtCore/qthreadpool.h /usr/include/qt6/QtCore/qthread.h \
+ /usr/include/qt6/QtCore/qrunnable.h \
  /home/leonardo/PwTpsit/PwGUI/PwGUI/./dependencies/code/searchinputdialog.h \
  /home/leonardo/PwTpsit/PwGUI/PwGUI/./dependencies/code/search.h
