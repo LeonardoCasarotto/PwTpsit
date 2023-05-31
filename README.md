@@ -7,7 +7,7 @@
 <h2>Development Environment</h2>
 
 <p>First of all, we worked on a UNIX-based operating system to be able to use the POSIX standards in our project.
-  <br>In particular, the distribution we chose is <a href="https://endeavouros.com">EndeavourOs</a>, based on Arch Linux. To develop the software, we used the <a href="https://github.com/qt-creator/qt-creator">QtCreator</a> software.</p>
+  <br>In particular, the distribution we chose is <a href="https://endeavouros.com">EndeavourOs</a>, based on Arch Linux. To develop the software, we used the <a href="https://github.com/qt-creator/qt-creator">QtCreator</a> software. POSIX standard is required to use multithreading.</p>
 
 <h2>Main Features</h2>
 
