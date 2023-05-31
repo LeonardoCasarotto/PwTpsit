@@ -93,12 +93,12 @@
       <string>Percorso...</string>
      </property>
      <addaction name="actionCartella_precedente"/>
+     <addaction name="actionCambia_Directory"/>
+     <addaction name="actionRicarica_Grafica"/>
     </widget>
     <addaction name="menuCerca"/>
     <addaction name="menuOrganizza"/>
-    <addaction name="actionScegli_nuova_directory"/>
     <addaction name="menuPercorso"/>
-    <addaction name="actionRicarica"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -131,11 +131,6 @@
     <string>Per Contenuto</string>
    </property>
   </action>
-  <action name="actionScegli_nuova_directory">
-   <property name="text">
-    <string>Scegli nuova directory</string>
-   </property>
-  </action>
   <action name="actionOrdine_Alfabetico">
    <property name="text">
     <string>Ordine Alfabetico</string>
@@ -154,11 +149,6 @@
   <action name="actionDimensione">
    <property name="text">
     <string>Dimensione</string>
-   </property>
-  </action>
-  <action name="actionRicarica">
-   <property name="text">
-    <string>Ricarica directory</string>
    </property>
   </action>
   <action name="actionApri_in_Esplora_File">
@@ -181,12 +171,14 @@
     <string>Cartella precedente</string>
    </property>
   </action>
-  <action name="actionTema_Scuro">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionCambia_Directory">
    <property name="text">
-    <string>Tema Scuro</string>
+    <string>Cambia Directory</string>
+   </property>
+  </action>
+  <action name="actionRicarica_Grafica">
+   <property name="text">
+    <string>Ricarica Grafica</string>
    </property>
   </action>
  </widget>

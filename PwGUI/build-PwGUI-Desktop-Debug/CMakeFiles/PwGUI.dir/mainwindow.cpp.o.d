@@ -408,6 +408,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: \
  /usr/include/c++/13.1.1/condition_variable \
  /usr/include/c++/13.1.1/bits/atomic_futex.h \
  /usr/include/c++/13.1.1/bits/std_thread.h \
+ /usr/include/qt6/QtWidgets/QTextEdit \
+ /usr/include/qt6/QtWidgets/qtextedit.h \
  /home/leonardo/PwTpsit/PwGUI/build-PwGUI-Desktop-Debug/PwGUI_autogen/include/./ui_mainwindow.h \
  /usr/include/qt6/QtCore/QVariant /usr/include/qt6/QtCore/qvariant.h \
  /usr/include/qt6/QtGui/QAction /usr/include/qt6/QtGui/qaction.h \

@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
             this, SLOT(onListWidgetItemClicked(QListWidgetItem*)));
 
 
-    on_actionScegli_nuova_directory_triggered();
+    on_actionCambia_Directory_triggered();
 
 
 }
@@ -227,24 +227,6 @@ void MainWindow::on_actionPer_Estensione_triggered()
 
 
 
-void MainWindow::on_actionScegli_nuova_directory_triggered()
-{
-
-
-    ui->listWidget->clear();
-    QString dir = QFileDialog::getExistingDirectory(nullptr,
-                                                    QObject::tr("Selezionare la cartella iniziale"),
-                                                    "/home",
-                                                    QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
-
-    current = dir;
-    ui->lineEdit->setText(current.absolutePath());
-    displayDirectory(dir);
-
-
-}
-
-
 void MainWindow::on_actionPer_contenuto_triggered()
 {
     QString word;
@@ -297,11 +279,7 @@ void MainWindow::on_actionDimensione_triggered()
 }
 
 
-void MainWindow::on_actionRicarica_triggered()
-{ 
-       displayDirectory(current.absolutePath());
 
-}
 
 
 void MainWindow::on_actionApri_in_Esplora_File_triggered()
@@ -333,4 +311,27 @@ void MainWindow::on_actionCartella_precedente_triggered()
 
 
 
+
+
+void MainWindow::on_actionCambia_Directory_triggered()
+{
+    ui->listWidget->clear();
+    QString dir = QFileDialog::getExistingDirectory(nullptr,
+                                                    QObject::tr("Selezionare la cartella iniziale"),
+                                                    "/home",
+                                                    QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+
+    current = dir;
+    ui->lineEdit->setText(current.absolutePath());
+    displayDirectory(dir);
+}
+
+
+void MainWindow::on_actionRicarica_Grafica_triggered()
+{
+
+       displayDirectory(current.absolutePath());
+
+
+}
 

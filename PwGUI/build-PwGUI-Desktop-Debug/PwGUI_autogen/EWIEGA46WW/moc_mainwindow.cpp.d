@@ -478,6 +478,7 @@
   /usr/include/qt6/QtWidgets/QListWidgetItem \
   /usr/include/qt6/QtWidgets/QMainWindow \
   /usr/include/qt6/QtWidgets/QMessageBox \
+  /usr/include/qt6/QtWidgets/QTextEdit \
   /usr/include/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/qt6/QtWidgets/qabstractitemdelegate.h \
   /usr/include/qt6/QtWidgets/qabstractitemview.h \
@@ -502,6 +503,7 @@
   /usr/include/qt6/QtWidgets/qstyleoption.h \
   /usr/include/qt6/QtWidgets/qtabbar.h \
   /usr/include/qt6/QtWidgets/qtabwidget.h \
+  /usr/include/qt6/QtWidgets/qtextedit.h \
   /usr/include/qt6/QtWidgets/qtwidgets-config.h \
   /usr/include/qt6/QtWidgets/qtwidgetsexports.h \
   /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \

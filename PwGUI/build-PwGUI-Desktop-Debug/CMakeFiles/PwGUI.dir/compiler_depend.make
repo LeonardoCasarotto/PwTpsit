@@ -546,6 +546,8 @@ CMakeFiles/PwGUI.dir/PwGUI_autogen/mocs_compilation.cpp.o: PwGUI_autogen/mocs_co
   /usr/include/c++/13.1.1/condition_variable \
   /usr/include/c++/13.1.1/bits/atomic_futex.h \
   /usr/include/c++/13.1.1/bits/std_thread.h \
+  /usr/include/qt6/QtWidgets/QTextEdit \
+  /usr/include/qt6/QtWidgets/qtextedit.h \
   /usr/include/qt6/QtCore/qtmochelpers.h
 
 CMakeFiles/PwGUI.dir/dependencies/code/searchinputdialog.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/dependencies/code/searchinputdialog.cpp \
@@ -1524,6 +1526,8 @@ CMakeFiles/PwGUI.dir/main.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/main.cpp \
   /usr/include/c++/13.1.1/condition_variable \
   /usr/include/c++/13.1.1/bits/atomic_futex.h \
   /usr/include/c++/13.1.1/bits/std_thread.h \
+  /usr/include/qt6/QtWidgets/QTextEdit \
+  /usr/include/qt6/QtWidgets/qtextedit.h \
   /usr/include/qt6/QtWidgets/QApplication \
   /usr/include/qt6/QtWidgets/qapplication.h \
   /usr/include/qt6/QtCore/qcoreapplication.h \
@@ -2079,6 +2083,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
   /usr/include/c++/13.1.1/condition_variable \
   /usr/include/c++/13.1.1/bits/atomic_futex.h \
   /usr/include/c++/13.1.1/bits/std_thread.h \
+  /usr/include/qt6/QtWidgets/QTextEdit \
+  /usr/include/qt6/QtWidgets/qtextedit.h \
   PwGUI_autogen/include/ui_mainwindow.h \
   /usr/include/qt6/QtCore/QVariant \
   /usr/include/qt6/QtCore/qvariant.h \
@@ -2165,6 +2171,8 @@ CMakeFiles/PwGUI.dir/mainwindow.cpp.o: /home/leonardo/PwTpsit/PwGUI/PwGUI/mainwi
 /usr/include/qt6/QtWidgets/QApplication:
 
 /home/leonardo/PwTpsit/PwGUI/PwGUI/main.cpp:
+
+/usr/include/qt6/QtWidgets/qtextedit.h:
 
 /usr/include/c++/13.1.1/bits/std_thread.h:
 
@@ -2889,6 +2897,8 @@ PwGUI_autogen/include/ui_mainwindow.h:
 /usr/include/c++/13.1.1/ostream:
 
 /usr/include/c++/13.1.1/bits/locale_classes.h:
+
+/usr/include/qt6/QtWidgets/QTextEdit:
 
 /usr/include/c++/13.1.1/bits/ostream_insert.h:
 

@@ -47,17 +47,17 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "on_actionWiki_triggered",
     "on_actionper_nome_triggered",
     "on_actionPer_Estensione_triggered",
-    "on_actionScegli_nuova_directory_triggered",
     "on_actionPer_contenuto_triggered",
     "on_actionOrdine_Alfabetico_triggered",
     "on_actionEstensione_triggered",
     "on_actionProprietario_triggered",
     "on_actionDimensione_triggered",
-    "on_actionRicarica_triggered",
     "on_actionApri_in_Esplora_File_triggered",
     "on_actionRinomina_in_ordine_alfabetico_triggered",
     "on_actionRinomina_in_ordine_di_modifica_triggered",
-    "on_actionCartella_precedente_triggered"
+    "on_actionCartella_precedente_triggered",
+    "on_actionCambia_Directory_triggered",
+    "on_actionRicarica_Grafica_triggered"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
@@ -70,17 +70,17 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata5[24];
     char stringdata6[28];
     char stringdata7[34];
-    char stringdata8[42];
-    char stringdata9[33];
-    char stringdata10[37];
-    char stringdata11[30];
-    char stringdata12[32];
-    char stringdata13[30];
-    char stringdata14[28];
-    char stringdata15[40];
-    char stringdata16[49];
-    char stringdata17[50];
-    char stringdata18[39];
+    char stringdata8[33];
+    char stringdata9[37];
+    char stringdata10[30];
+    char stringdata11[32];
+    char stringdata12[30];
+    char stringdata13[40];
+    char stringdata14[49];
+    char stringdata15[50];
+    char stringdata16[39];
+    char stringdata17[36];
+    char stringdata18[36];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -94,17 +94,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(58, 23),  // "on_actionWiki_triggered"
         QT_MOC_LITERAL(82, 27),  // "on_actionper_nome_triggered"
         QT_MOC_LITERAL(110, 33),  // "on_actionPer_Estensione_trigg..."
-        QT_MOC_LITERAL(144, 41),  // "on_actionScegli_nuova_directo..."
-        QT_MOC_LITERAL(186, 32),  // "on_actionPer_contenuto_triggered"
-        QT_MOC_LITERAL(219, 36),  // "on_actionOrdine_Alfabetico_tr..."
-        QT_MOC_LITERAL(256, 29),  // "on_actionEstensione_triggered"
-        QT_MOC_LITERAL(286, 31),  // "on_actionProprietario_triggered"
-        QT_MOC_LITERAL(318, 29),  // "on_actionDimensione_triggered"
-        QT_MOC_LITERAL(348, 27),  // "on_actionRicarica_triggered"
-        QT_MOC_LITERAL(376, 39),  // "on_actionApri_in_Esplora_File..."
-        QT_MOC_LITERAL(416, 48),  // "on_actionRinomina_in_ordine_a..."
-        QT_MOC_LITERAL(465, 49),  // "on_actionRinomina_in_ordine_d..."
-        QT_MOC_LITERAL(515, 38)   // "on_actionCartella_precedente_..."
+        QT_MOC_LITERAL(144, 32),  // "on_actionPer_contenuto_triggered"
+        QT_MOC_LITERAL(177, 36),  // "on_actionOrdine_Alfabetico_tr..."
+        QT_MOC_LITERAL(214, 29),  // "on_actionEstensione_triggered"
+        QT_MOC_LITERAL(244, 31),  // "on_actionProprietario_triggered"
+        QT_MOC_LITERAL(276, 29),  // "on_actionDimensione_triggered"
+        QT_MOC_LITERAL(306, 39),  // "on_actionApri_in_Esplora_File..."
+        QT_MOC_LITERAL(346, 48),  // "on_actionRinomina_in_ordine_a..."
+        QT_MOC_LITERAL(395, 49),  // "on_actionRinomina_in_ordine_d..."
+        QT_MOC_LITERAL(445, 38),  // "on_actionCartella_precedente_..."
+        QT_MOC_LITERAL(484, 35),  // "on_actionCambia_Directory_tri..."
+        QT_MOC_LITERAL(520, 35)   // "on_actionRicarica_Grafica_tri..."
     },
     "MainWindow",
     "onListWidgetItemClicked",
@@ -114,17 +114,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "on_actionWiki_triggered",
     "on_actionper_nome_triggered",
     "on_actionPer_Estensione_triggered",
-    "on_actionScegli_nuova_directory_triggered",
     "on_actionPer_contenuto_triggered",
     "on_actionOrdine_Alfabetico_triggered",
     "on_actionEstensione_triggered",
     "on_actionProprietario_triggered",
     "on_actionDimensione_triggered",
-    "on_actionRicarica_triggered",
     "on_actionApri_in_Esplora_File_triggered",
     "on_actionRinomina_in_ordine_alfabetico_triggered",
     "on_actionRinomina_in_ordine_di_modifica_triggered",
-    "on_actionCartella_precedente_triggered"
+    "on_actionCartella_precedente_triggered",
+    "on_actionCambia_Directory_triggered",
+    "on_actionRicarica_Grafica_triggered"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -198,8 +198,6 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionPer_Estensione_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_actionScegli_nuova_directory_triggered'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionPer_contenuto_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionOrdine_Alfabetico_triggered'
@@ -210,8 +208,6 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionDimensione_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_actionRicarica_triggered'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionApri_in_Esplora_File_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionRinomina_in_ordine_alfabetico_triggered'
@@ -219,6 +215,10 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_actionRinomina_in_ordine_di_modifica_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionCartella_precedente_triggered'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_actionCambia_Directory_triggered'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_actionRicarica_Grafica_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -234,17 +234,17 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 1: _t->on_actionWiki_triggered(); break;
         case 2: _t->on_actionper_nome_triggered(); break;
         case 3: _t->on_actionPer_Estensione_triggered(); break;
-        case 4: _t->on_actionScegli_nuova_directory_triggered(); break;
-        case 5: _t->on_actionPer_contenuto_triggered(); break;
-        case 6: _t->on_actionOrdine_Alfabetico_triggered(); break;
-        case 7: _t->on_actionEstensione_triggered(); break;
-        case 8: _t->on_actionProprietario_triggered(); break;
-        case 9: _t->on_actionDimensione_triggered(); break;
-        case 10: _t->on_actionRicarica_triggered(); break;
-        case 11: _t->on_actionApri_in_Esplora_File_triggered(); break;
-        case 12: _t->on_actionRinomina_in_ordine_alfabetico_triggered(); break;
-        case 13: _t->on_actionRinomina_in_ordine_di_modifica_triggered(); break;
-        case 14: _t->on_actionCartella_precedente_triggered(); break;
+        case 4: _t->on_actionPer_contenuto_triggered(); break;
+        case 5: _t->on_actionOrdine_Alfabetico_triggered(); break;
+        case 6: _t->on_actionEstensione_triggered(); break;
+        case 7: _t->on_actionProprietario_triggered(); break;
+        case 8: _t->on_actionDimensione_triggered(); break;
+        case 9: _t->on_actionApri_in_Esplora_File_triggered(); break;
+        case 10: _t->on_actionRinomina_in_ordine_alfabetico_triggered(); break;
+        case 11: _t->on_actionRinomina_in_ordine_di_modifica_triggered(); break;
+        case 12: _t->on_actionCartella_precedente_triggered(); break;
+        case 13: _t->on_actionCambia_Directory_triggered(); break;
+        case 14: _t->on_actionRicarica_Grafica_triggered(); break;
         default: ;
         }
     }

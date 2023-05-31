@@ -407,6 +407,8 @@ CMakeFiles/PwGUI.dir/main.cpp.o: \
  /usr/include/c++/13.1.1/condition_variable \
  /usr/include/c++/13.1.1/bits/atomic_futex.h \
  /usr/include/c++/13.1.1/bits/std_thread.h \
+ /usr/include/qt6/QtWidgets/QTextEdit \
+ /usr/include/qt6/QtWidgets/qtextedit.h \
  /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtCore/qcoreapplication.h \

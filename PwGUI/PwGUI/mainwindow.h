@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <sys/wait.h>
 #include <QThread>
-
+#include <QTextEdit>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -40,8 +40,6 @@ private slots:
 
     void on_actionPer_Estensione_triggered();
 
-    void on_actionScegli_nuova_directory_triggered();
-
     void on_actionPer_contenuto_triggered();
 
     void on_actionOrdine_Alfabetico_triggered();
@@ -52,8 +50,6 @@ private slots:
 
     void on_actionDimensione_triggered();
 
-    void on_actionRicarica_triggered();
-
     void on_actionApri_in_Esplora_File_triggered();
 
     void on_actionRinomina_in_ordine_alfabetico_triggered();
@@ -63,6 +59,10 @@ private slots:
     void on_actionCartella_precedente_triggered();
 
 
+
+    void on_actionCambia_Directory_triggered();
+
+    void on_actionRicarica_Grafica_triggered();
 
 private:
     Ui::MainWindow *ui;
