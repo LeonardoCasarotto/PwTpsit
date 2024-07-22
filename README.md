@@ -1,7 +1,9 @@
 <h1>Research and File Reorganization Project</h1>
 
+
 <h2>Introduction</h2>
-<p>Our project consists of creating a utility for file research and reorganization using concurrent programming. We have developed this solution using the <a href="https://qt.io">Qt framework</a>, which allowed us to provide a graphical user interface (GUI) for the <a href="https://isocpp.org">C++ language.</a></p>
+<p>
+Our project consists of creating a utility for file research and reorganization using concurrent programming. We have developed this solution using the <a href="https://qt.io">Qt framework</a>, which allowed us to provide a graphical user interface (GUI) for the <a href="https://isocpp.org">C++ language.</a></p>
 
 
 <h2>Development Environment</h2>
@@ -42,6 +44,9 @@ Please note that since this repository is currently private, you will need to lo
 <h2>Interface</h2>
 <img src="./Dependencies/imgs/init.png?raw=true" float="left"><p float="right">When launched, the program displays a prompt asking the user to navigate to the initial folder from which to run the program. Of course, it will still be possible to change the folder afterwards.</p>
 <img src="./Dependencies/imgs/fileViews.png?raw=true"<p>Once the folder is selected, a list of all the files and folders within it will appear, easily recognizable by their dedicated icon based on the file type. From the menu bar located at the top section of the screen, you can perform all the main functions of the program, including searching for further details in the software's <a href="https://github.com/LeonardoCasarotto/PwTpsit/wiki">Wiki.</a><br><b>Currently, the software and the wiki are only available in Italian language.</b></p>
+
+<h2>Note:</h2>
+<p>This project is a school assignment.</p>
 <!--
 <h2> Creators </h2>
 ![WhatsApp Image 2023-05-30 at 21 11 27](https://github.com/LeonardoCasarotto/PwTpsit/assets/98023003/8316e328-56bb-46ff-acc6-270a2a6878cc)
